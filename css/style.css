@@ -148,11 +148,6 @@ img {
   flex-wrap: wrap;
 }
 
-.signal-row {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
 
 .button-row {
   display: flex;
@@ -201,9 +196,6 @@ img {
   gap: 18px;
 }
 
-.hero-panel .signal-row {
-  margin-top: 6px;
-}
 
 .hero-panel h3 {
   font-size: 1.3rem;
