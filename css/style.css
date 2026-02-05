@@ -53,7 +53,14 @@ a {
   margin-top: 6px;
   padding: 6px 10px;
   border-radius: 6px;
-  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.download-link::before {
+  content: "↓ ";
 }
 
 img {
