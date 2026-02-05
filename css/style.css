@@ -1,14 +1,14 @@
 :root {
-  --bg: #0b0f0a;
-  --bg-alt: #101610;
-  --panel: #0f1510;
+  --bg: #0b0d0b;
+  --bg-alt: #101311;
+  --panel: #0e120f;
   --ink: #d7fdd0;
   --muted: #86b98a;
   --accent: #4cff6a;
   --accent-2: #9affb0;
   --glow-1: rgba(76, 255, 106, 0.15);
   --glow-2: rgba(154, 255, 176, 0.18);
-  --border: #1c2a1c;
+  --border: #1b211d;
   --shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
   --radius: 12px;
 }
@@ -74,7 +74,11 @@ header {
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #1b2b1b, #0f1510);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent) 22%, var(--bg)),
+    var(--bg-alt)
+  );
   border: 1px solid var(--accent);
   box-shadow: 0 0 16px color-mix(in srgb, var(--accent) 45%, transparent);
   position: relative;
@@ -107,7 +111,7 @@ header {
 .nav-links a:hover,
 .nav-links a.active {
   border-color: var(--accent);
-  box-shadow: 0 0 16px rgba(76, 255, 106, 0.25);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--accent) 30%, transparent);
 }
 
 .hero {
@@ -182,7 +186,7 @@ header {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #243324;
+  background: color-mix(in srgb, var(--accent) 18%, var(--bg-alt));
   border: 1px solid var(--border);
 }
 
@@ -304,6 +308,9 @@ header {
   --muted: #98c0ff;
   --glow-1: rgba(64, 140, 255, 0.22);
   --glow-2: rgba(64, 140, 255, 0.12);
+  --bg-alt: color-mix(in srgb, var(--accent) 8%, #0a0e0a);
+  --panel: color-mix(in srgb, var(--accent) 6%, #0d120f);
+  --border: color-mix(in srgb, var(--accent) 28%, #141a14);
 }
 
 .running-page {
@@ -311,6 +318,9 @@ header {
   --muted: #8bffc2;
   --glow-1: rgba(64, 255, 120, 0.22);
   --glow-2: rgba(64, 255, 120, 0.12);
+  --bg-alt: color-mix(in srgb, var(--accent) 8%, #0a0e0a);
+  --panel: color-mix(in srgb, var(--accent) 6%, #0d120f);
+  --border: color-mix(in srgb, var(--accent) 28%, #141a14);
 }
 
 .paused-page {
@@ -318,6 +328,9 @@ header {
   --muted: #f3da9b;
   --glow-1: rgba(255, 210, 90, 0.24);
   --glow-2: rgba(255, 210, 90, 0.12);
+  --bg-alt: color-mix(in srgb, var(--accent) 10%, #0a0e0a);
+  --panel: color-mix(in srgb, var(--accent) 7%, #0d120f);
+  --border: color-mix(in srgb, var(--accent) 30%, #141a14);
 }
 
 .stopped-page {
@@ -325,6 +338,9 @@ header {
   --muted: #ff9a9a;
   --glow-1: rgba(255, 90, 90, 0.24);
   --glow-2: rgba(255, 90, 90, 0.12);
+  --bg-alt: color-mix(in srgb, var(--accent) 10%, #0a0e0a);
+  --panel: color-mix(in srgb, var(--accent) 7%, #0d120f);
+  --border: color-mix(in srgb, var(--accent) 30%, #141a14);
 }
 
 .archived-page {
@@ -332,6 +348,9 @@ header {
   --muted: #cfcfcf;
   --glow-1: rgba(245, 245, 245, 0.2);
   --glow-2: rgba(245, 245, 245, 0.1);
+  --bg-alt: color-mix(in srgb, var(--accent) 8%, #0a0e0a);
+  --panel: color-mix(in srgb, var(--accent) 5%, #0d120f);
+  --border: color-mix(in srgb, var(--accent) 22%, #141a14);
 }
 
 .page-hero {
