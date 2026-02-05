@@ -6,18 +6,13 @@ navLinks.forEach((link) => {
   const href = link.getAttribute("href");
   if (!href) return;
 
-  if (href === "index.html" && (current === "index.html" || path === "/")) {
-    link.classList.add("active");
-    return;
-  }
+  const isHome = href === "index.html" && (current === "index.html" || path === "/");
+  const isProjects = href === "projects.html" && (current === "projects.html" || path.includes("/projects/"));
+  const isCurrent = href === current;
 
-  if (href === "projects.html" && (current === "projects.html" || path.includes("/projects/"))) {
+  if (isHome || isProjects || isCurrent) {
     link.classList.add("active");
-    return;
-  }
-
-  if (href === current) {
-    link.classList.add("active");
+    link.setAttribute("aria-current", "page");
   }
 });
 
