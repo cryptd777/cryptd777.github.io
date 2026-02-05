@@ -1,7 +1,21 @@
-const current = location.pathname.split("/").pop() || "index.html";
+const path = location.pathname;
+const current = path.split("/").pop() || "index.html";
 const links = document.querySelectorAll(".nav-links a");
 links.forEach((link) => {
-  if (link.getAttribute("href") === current) {
+  const href = link.getAttribute("href");
+  if (!href) return;
+
+  if (href === "index.html" && (path === "/" || current === "index.html")) {
+    link.classList.add("active");
+    return;
+  }
+
+  if (href === "projects.html" && (current === "projects.html" || path.includes("/projects/"))) {
+    link.classList.add("active");
+    return;
+  }
+
+  if (href === current) {
     link.classList.add("active");
   }
 });
