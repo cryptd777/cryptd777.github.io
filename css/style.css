@@ -346,22 +346,28 @@ img {
 
 .arabic-quote {
   margin: 0;
-  padding: 18px 20px;
-  border-radius: 16px;
-  background: rgba(47, 111, 255, 0.08);
-  border: 1px solid rgba(47, 111, 255, 0.25);
+  padding: 18px 22px;
+  border-radius: 14px;
+  background: rgba(15, 138, 107, 0.06);
+  border: 1px solid rgba(15, 138, 107, 0.18);
+  border-right: 4px solid rgba(15, 138, 107, 0.55);
   font-family: var(--arabic);
-  font-size: 1.3rem;
-  color: #1c2431;
-  line-height: 1.9;
-  box-shadow: 0 18px 40px rgba(47, 111, 255, 0.08);
+  font-size: clamp(1.25rem, 2.1vw, 1.6rem);
+  font-weight: 600;
+  color: #1c232c;
+  line-height: 2.1;
+  text-align: right;
+  unicode-bidi: plaintext;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
 }
 
 .arabic-quote .arabic-attrib {
   display: block;
-  margin-top: 8px;
+  margin-top: 10px;
   font-size: 0.95rem;
   color: var(--muted);
+  font-weight: 500;
 }
 
 .cta-grid {
