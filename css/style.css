@@ -24,6 +24,10 @@ html, body {
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--sans);
   color: var(--ink);
@@ -32,6 +36,8 @@ body {
     radial-gradient(700px 420px at 90% -10%, rgba(240, 79, 55, 0.14), transparent 70%),
     linear-gradient(180deg, var(--bg), var(--bg-2));
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -108,7 +114,8 @@ header {
 }
 
 .nav-links a:hover,
-.nav-links a.active {
+.nav-links a.active,
+.nav-links a[aria-current="page"] {
   border-color: rgba(15, 138, 107, 0.4);
   background: rgba(15, 138, 107, 0.08);
 }
@@ -263,6 +270,11 @@ header {
 .card:focus-within {
   transform: translateY(-4px);
   box-shadow: 0 22px 44px rgba(15, 15, 15, 0.16);
+}
+
+.card:focus-visible {
+  outline: 2px solid rgba(15, 138, 107, 0.35);
+  outline-offset: 2px;
 }
 
 .card h3 {
@@ -440,5 +452,18 @@ header {
 
   .hero {
     padding: 80px 0 60px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }

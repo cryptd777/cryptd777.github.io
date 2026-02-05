@@ -8,16 +8,19 @@ navLinks.forEach((link) => {
 
   if (href === "index.html" && (current === "index.html" || path === "/")) {
     link.classList.add("active");
+    link.setAttribute("aria-current", "page");
     return;
   }
 
   if (href === "projects.html" && (current === "projects.html" || path.includes("/projects/"))) {
     link.classList.add("active");
+    link.setAttribute("aria-current", "page");
     return;
   }
 
   if (href === current) {
     link.classList.add("active");
+    link.setAttribute("aria-current", "page");
   }
 });
 
