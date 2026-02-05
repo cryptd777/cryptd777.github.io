@@ -248,32 +248,38 @@ header {
 
 .project-tag.live {
   background: rgba(76, 255, 106, 0.18);
-  color: var(--accent);
-  border: 1px solid rgba(76, 255, 106, 0.4);
+  color: #4cff6a;
+  border: 1px solid rgba(76, 255, 106, 0.45);
 }
 
 .project-tag.dev {
-  background: rgba(89, 173, 255, 0.18);
-  color: #73b9ff;
-  border: 1px solid rgba(89, 173, 255, 0.4);
-}
-
-.project-tag.paused {
-  background: rgba(255, 180, 64, 0.18);
-  color: #ffb44a;
-  border: 1px solid rgba(255, 180, 64, 0.4);
+  background: rgba(64, 140, 255, 0.2);
+  color: #5aa0ff;
+  border: 1px solid rgba(64, 140, 255, 0.5);
 }
 
 .project-tag.running {
-  background: rgba(155, 255, 146, 0.18);
-  color: #9bff92;
-  border: 1px solid rgba(155, 255, 146, 0.4);
+  background: rgba(64, 255, 120, 0.2);
+  color: #48ff7a;
+  border: 1px solid rgba(64, 255, 120, 0.5);
 }
 
-.project-tag.ux {
-  background: rgba(140, 120, 255, 0.18);
-  color: #b3a4ff;
-  border: 1px solid rgba(140, 120, 255, 0.4);
+.project-tag.paused {
+  background: rgba(255, 210, 90, 0.2);
+  color: #ffd15a;
+  border: 1px solid rgba(255, 210, 90, 0.5);
+}
+
+.project-tag.stopped {
+  background: rgba(255, 90, 90, 0.2);
+  color: #ff5a5a;
+  border: 1px solid rgba(255, 90, 90, 0.5);
+}
+
+.project-tag.archived {
+  background: rgba(245, 245, 245, 0.15);
+  color: #f5f5f5;
+  border: 1px solid rgba(245, 245, 245, 0.35);
 }
 
 .project-status {
@@ -291,16 +297,72 @@ header {
 
 .paused-page .hero,
 .paused-page .page-hero {
-  color: #ffcf7a;
+  color: #ffd15a;
 }
 
 .paused-page .terminal-panel {
-  border-color: rgba(255, 180, 64, 0.5);
-  box-shadow: 0 0 24px rgba(255, 180, 64, 0.15);
+  border-color: rgba(255, 210, 90, 0.6);
+  box-shadow: 0 0 24px rgba(255, 210, 90, 0.18);
 }
 
 .paused-page .terminal-line span {
-  color: #ffb44a;
+  color: #ffd15a;
+}
+
+.dev-page .hero,
+.dev-page .page-hero {
+  color: #5aa0ff;
+}
+
+.dev-page .terminal-panel {
+  border-color: rgba(64, 140, 255, 0.55);
+  box-shadow: 0 0 24px rgba(64, 140, 255, 0.18);
+}
+
+.dev-page .terminal-line span {
+  color: #5aa0ff;
+}
+
+.running-page .hero,
+.running-page .page-hero {
+  color: #48ff7a;
+}
+
+.running-page .terminal-panel {
+  border-color: rgba(64, 255, 120, 0.55);
+  box-shadow: 0 0 24px rgba(64, 255, 120, 0.18);
+}
+
+.running-page .terminal-line span {
+  color: #48ff7a;
+}
+
+.stopped-page .hero,
+.stopped-page .page-hero {
+  color: #ff5a5a;
+}
+
+.stopped-page .terminal-panel {
+  border-color: rgba(255, 90, 90, 0.55);
+  box-shadow: 0 0 24px rgba(255, 90, 90, 0.18);
+}
+
+.stopped-page .terminal-line span {
+  color: #ff5a5a;
+}
+
+.archived-page .hero,
+.archived-page .page-hero {
+  color: #f5f5f5;
+}
+
+.archived-page .terminal-panel {
+  border-color: rgba(245, 245, 245, 0.45);
+  box-shadow: 0 0 24px rgba(245, 245, 245, 0.12);
+}
+
+.archived-page .terminal-line span {
+  color: #f5f5f5;
 }
 
 .page-hero {
