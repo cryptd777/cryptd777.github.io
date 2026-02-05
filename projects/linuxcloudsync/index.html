@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css" />
 </head>
-<body class="running-page">
+<body class="running-page lcs-page">
   <header>
     <div class="container nav">
       <a class="brand" href="../../index.html">
@@ -31,7 +31,7 @@
       <p>Sync and backup tooling tuned for Linux performance and control.</p>
     </section>
 
-    <section class="section container">
+    <section class="section container split-layout">
       <div class="terminal-panel">
         <div class="terminal-header">
           <span class="terminal-dot"></span>
@@ -40,12 +40,33 @@
         </div>
         <div class="terminal-line"><span>$</span> status</div>
         <div class="terminal-line"><span class="project-tag running">RUNNING</span></div>
-        <div class="terminal-line"><span>$</span> stack</div>
-        <div class="terminal-line">rclone 1.65.2 · CustomTkinter · PyInstaller</div>
         <div class="terminal-line"><span>$</span> focus</div>
         <div class="terminal-line">speed · privacy · linux-first</div>
         <div class="terminal-line"><span>$</span> live</div>
         <div class="terminal-line">Live since February 5, 2026</div>
+        <div class="terminal-line"><span>$</span> stack</div>
+        <div class="terminal-line">rclone 1.65.2 · CustomTkinter · PyInstaller</div>
+      </div>
+      <div class="snapshot-card">
+        <h3>Snapshot</h3>
+        <div class="snapshot-grid">
+          <div class="snapshot-item">
+            <span class="snapshot-label">Version</span>
+            <span class="snapshot-value">0.0.3 Professional Edition</span>
+          </div>
+          <div class="snapshot-item">
+            <span class="snapshot-label">Platforms</span>
+            <span class="snapshot-value">Linux · AMD64 · ARM64 · ARMHF · i386</span>
+          </div>
+          <div class="snapshot-item">
+            <span class="snapshot-label">Sync Targets</span>
+            <span class="snapshot-value">Google Drive · OneDrive</span>
+          </div>
+          <div class="snapshot-item">
+            <span class="snapshot-label">Security</span>
+            <span class="snapshot-value">0600 credentials · path restrictions · validation</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -73,6 +94,11 @@
           <h3>Advanced Options</h3>
           <p>Bandwidth limits, dry run mode, exclude patterns, and logs.</p>
         </div>
+        <div class="project-card">
+          <span class="project-tag">PORTABLE</span>
+          <h3>Zero Dependencies</h3>
+          <p>Bundles rclone and ships as a single DEB package.</p>
+        </div>
       </div>
       <p class="inline-meta">Version 0.0.3 Professional Edition, released February 5, 2026.</p>
     </section>
@@ -81,7 +107,7 @@
       <h2>Download</h2>
       <p>Latest releases are published on GitHub with DEB packages for Linux.</p>
       <p><a class="link-inline download-link" href="https://github.com/cryptd777/LinuxCloudSync">View on GitHub</a></p>
-      <div class="terminal-panel">
+      <div class="terminal-panel compact">
         <div class="terminal-header">
           <span class="terminal-dot"></span>
           <span class="terminal-dot"></span>
@@ -95,23 +121,23 @@
 
     <section class="section container">
       <h2>Quick Start</h2>
-      <p>Launch <span class="inline-meta">lcs</span>, connect Google Drive or OneDrive, select a local folder, then run Force Resync once before your first sync.</p>
-      <div class="projects">
-        <div class="project-card">
-          <span class="project-tag">CONNECT</span>
-          <h3>Cloud Setup</h3>
-          <p>Connect a remote, pick a local folder, and choose your sync mode.</p>
+      <p>Launch <span class="inline-code">lcs</span>, connect a cloud, select a local folder, then run Force Resync once before your first sync.</p>
+      <div class="terminal-panel compact">
+        <div class="terminal-header">
+          <span class="terminal-dot"></span>
+          <span class="terminal-dot"></span>
+          <span class="terminal-dot"></span>
         </div>
-        <div class="project-card">
-          <span class="project-tag">SYNC</span>
-          <h3>Start Sync</h3>
-          <p>Use Dry Run for a preview, then run a full sync when ready.</p>
-        </div>
-        <div class="project-card">
-          <span class="project-tag">SAVE</span>
-          <h3>Save Profiles</h3>
-          <p>Store working setups for one-click future syncs.</p>
-        </div>
+        <div class="terminal-line"><span>$</span> connect</div>
+        <div class="terminal-line">Google Drive or OneDrive</div>
+        <div class="terminal-line"><span>$</span> setup</div>
+        <div class="terminal-line">Pick local folder · choose sync mode</div>
+        <div class="terminal-line"><span>$</span> baseline</div>
+        <div class="terminal-line">Click Force Resync (first run)</div>
+        <div class="terminal-line"><span>$</span> sync</div>
+        <div class="terminal-line">Run Dry Run, then Start Sync</div>
+        <div class="terminal-line"><span>$</span> save</div>
+        <div class="terminal-line">Save Profile for reuse</div>
       </div>
     </section>
 
