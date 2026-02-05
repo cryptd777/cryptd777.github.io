@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css" />
 </head>
-<body class="dev-page">
+<body class="running-page">
   <header>
     <div class="container nav">
       <a class="brand" href="../../index.html">
@@ -39,12 +39,86 @@
           <span class="terminal-dot"></span>
         </div>
         <div class="terminal-line"><span>$</span> status</div>
-        <div class="terminal-line"><span class="project-tag dev">IN DEV</span></div>
+        <div class="terminal-line"><span class="project-tag running">RUNNING</span></div>
+        <div class="terminal-line"><span>$</span> stack</div>
+        <div class="terminal-line">rclone 1.65.2 · CustomTkinter · PyInstaller</div>
         <div class="terminal-line"><span>$</span> focus</div>
         <div class="terminal-line">speed · privacy · linux-first</div>
-        <div class="terminal-line"><span>$</span> countdown</div>
-        <div class="terminal-line" data-countdown="2026-02-09T00:00:00Z" data-countdown-label="Launch">Launch: calculating...</div>
+        <div class="terminal-line"><span>$</span> live</div>
+        <div class="terminal-line">Live since February 5, 2026</div>
       </div>
+    </section>
+
+    <section class="section container">
+      <h2>Highlights</h2>
+      <p>Professional Linux sync client with profiles, multiple sync modes, and safe recovery tools.</p>
+      <div class="projects">
+        <div class="project-card">
+          <span class="project-tag">PROFILES</span>
+          <h3>Sync Profiles</h3>
+          <p>Save and load configurations for quick reuse.</p>
+        </div>
+        <div class="project-card">
+          <span class="project-tag">MODES</span>
+          <h3>Three Sync Modes</h3>
+          <p>Bidirectional, Cloud to Local, or Local to Cloud.</p>
+        </div>
+        <div class="project-card">
+          <span class="project-tag">RECOVERY</span>
+          <h3>Force Resync</h3>
+          <p>One-click fix for bisync baseline errors.</p>
+        </div>
+        <div class="project-card">
+          <span class="project-tag">CONTROL</span>
+          <h3>Advanced Options</h3>
+          <p>Bandwidth limits, dry run mode, exclude patterns, and logs.</p>
+        </div>
+      </div>
+      <p class="inline-meta">Version 0.0.3 Professional Edition, released February 5, 2026.</p>
+    </section>
+
+    <section class="section container">
+      <h2>Download</h2>
+      <p>Latest releases are published on GitHub with DEB packages for Linux.</p>
+      <p><a class="link-inline download-link" href="https://github.com/cryptd777/LinuxCloudSync">View on GitHub</a></p>
+      <div class="terminal-panel">
+        <div class="terminal-header">
+          <span class="terminal-dot"></span>
+          <span class="terminal-dot"></span>
+          <span class="terminal-dot"></span>
+        </div>
+        <div class="terminal-line"><span>$</span> install</div>
+        <div class="terminal-line">sudo dpkg -i github.cryptd777.linuxcloudsync_*.deb</div>
+      </div>
+      <p class="inline-meta">Supports AMD64, ARM64, ARMHF, and i386.</p>
+    </section>
+
+    <section class="section container">
+      <h2>Quick Start</h2>
+      <p>Launch <span class="inline-meta">lcs</span>, connect Google Drive or OneDrive, select a local folder, then run Force Resync once before your first sync.</p>
+      <div class="projects">
+        <div class="project-card">
+          <span class="project-tag">CONNECT</span>
+          <h3>Cloud Setup</h3>
+          <p>Connect a remote, pick a local folder, and choose your sync mode.</p>
+        </div>
+        <div class="project-card">
+          <span class="project-tag">SYNC</span>
+          <h3>Start Sync</h3>
+          <p>Use Dry Run for a preview, then run a full sync when ready.</p>
+        </div>
+        <div class="project-card">
+          <span class="project-tag">SAVE</span>
+          <h3>Save Profiles</h3>
+          <p>Store working setups for one-click future syncs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2>Security</h2>
+      <p>Built with safe defaults: input validation, restricted paths, secure permissions on credentials, and clean shutdown behavior.</p>
+      <p class="inline-meta">Credentials stored with 0600 permissions.</p>
     </section>
   </main>
 
