@@ -4,16 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | cryptd777</title>
+  <meta name="description" content="Open-source Linux projects from cryptd777. Running, live, and paused builds with clear status." />
+  <meta property="og:title" content="Projects | cryptd777" />
+  <meta property="og:description" content="Open-source Linux projects with clear status and release notes." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
     <div class="container nav">
       <a class="brand" href="index.html">
-        <span class="brand-mark"></span>
+        <span class="brand-mark">c7</span>
         <span>cryptd777</span>
       </a>
       <nav class="nav-links">
@@ -27,41 +31,52 @@
 
   <main>
     <section class="page-hero container">
+      <p class="kicker">Portfolio</p>
       <h1>Projects</h1>
-      <p>Active, in-progress, and paused builds — all open source.</p>
-      <div class="status-legend">
-        <span class="project-tag running">RUNNING</span>
-        <span class="project-tag dev">IN DEV</span>
-        <span class="project-tag paused">PAUSED</span>
+      <p>Active, in-progress, and paused builds. All open source and built for the Linux community.</p>
+    </section>
+
+    <section class="section container reveal" data-reveal>
+      <div class="card-grid">
+        <a class="card project-card" href="projects/cryptowser/">
+          <div class="card-topline"></div>
+          <span class="badge">Running</span>
+          <h3>Cryptowser</h3>
+          <p>Privacy-focused Electron browser optimized for low-resource Linux systems.</p>
+          <p class="status">Production-ready</p>
+        </a>
+        <a class="card project-card" href="projects/linuxcloudsync/">
+          <div class="card-topline"></div>
+          <span class="badge live">Running</span>
+          <h3>LinuxCloudSync</h3>
+          <p>Professional Linux sync client with profiles, three sync modes, and recovery tools.</p>
+          <p class="status">Live since Feb 5, 2026</p>
+        </a>
+        <a class="card project-card" href="projects/proxymaster/">
+          <div class="card-topline"></div>
+          <span class="badge paused">Paused</span>
+          <h3>ProxyMaster</h3>
+          <p>System proxy manager with package manager integration and fast toggles.</p>
+          <p class="status">Paused for now</p>
+        </a>
       </div>
     </section>
 
-    <section class="section container">
-      <div class="projects">
-        <a class="project-card status-running" href="/projects/cryptowser/">
-          <span class="project-tag running">RUNNING</span>
-          <h3>Cryptowser</h3>
-          <p>Security-first toolset with a clean, practical UI.</p>
-          <p class="project-status">Current state: Production-ready.</p>
-        </a>
-        <a class="project-card status-running" href="/projects/linuxcloudsync/">
-          <span class="project-tag running">RUNNING</span>
-          <h3>LinuxCloudSync</h3>
-          <p>Sync and backup tooling tuned for Linux performance and control.</p>
-          <p class="project-status">Live since February 5, 2026.</p>
-        </a>
-        <a class="project-card status-paused" href="/projects/proxymaster/">
-          <span class="project-tag paused">PAUSED</span>
-          <h3>ProxyMaster</h3>
-          <p>Linux GUI for system-wide proxy settings and package manager configs.</p>
-          <p class="project-status">Current state: Paused.</p>
-        </a>
+    <section class="section container reveal" data-reveal>
+      <div class="card cta-card">
+        <div class="card-topline"></div>
+        <h3>More builds on the way</h3>
+        <p class="section-subtitle">Follow along on GitHub for releases and changelogs.</p>
+        <div class="button-row">
+          <a class="button primary" href="https://github.com/cryptd777">GitHub profile</a>
+          <a class="button secondary" href="contact.html">Contact</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer container">
-    <p>Have a build you want to collaborate on? Reach out.</p>
+    <p>Want to collaborate? Reach out anytime.</p>
   </footer>
 
   <script src="js/main.js"></script>

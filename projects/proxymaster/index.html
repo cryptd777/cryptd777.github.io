@@ -4,16 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ProxyMaster | cryptd777</title>
+  <meta name="description" content="ProxyMaster is a Linux GUI for managing system proxy settings and package manager proxy configuration." />
+  <meta property="og:title" content="ProxyMaster | cryptd777" />
+  <meta property="og:description" content="Linux GUI for managing system proxy settings and package manager proxy configuration." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css" />
 </head>
-<body class="paused-page">
+<body>
   <header>
     <div class="container nav">
       <a class="brand" href="../../index.html">
-        <span class="brand-mark"></span>
+        <span class="brand-mark">c7</span>
         <span>cryptd777</span>
       </a>
       <nav class="nav-links">
@@ -27,73 +31,70 @@
 
   <main>
     <section class="page-hero container">
+      <p class="kicker">Paused</p>
       <h1>ProxyMaster</h1>
       <p>Linux GUI for managing system proxy settings and package manager proxy configuration.</p>
-    </section>
-
-    <section class="section container">
-      <div class="terminal-panel">
-        <div class="terminal-header">
-          <span class="terminal-dot"></span>
-          <span class="terminal-dot"></span>
-          <span class="terminal-dot"></span>
-        </div>
-        <div class="terminal-line"><span>$</span> status</div>
-        <div class="terminal-line"><span class="project-tag paused">PAUSED</span></div>
-        <div class="terminal-line"><span>$</span> stack</div>
-        <div class="terminal-line">Python 3.7+ · PyQt6/5 · Linux</div>
-        <div class="terminal-line"><span>$</span> focus</div>
-        <div class="terminal-line">proxy · package managers · environment</div>
+      <div class="meta-row">
+        <span class="badge paused">Paused</span>
       </div>
     </section>
 
-    <section class="section container">
-      <h2>Core Features</h2>
-      <p>Built to manage proxy configuration across the system and package managers.</p>
-      <div class="projects">
-        <div class="project-card">
-          <span class="project-tag">SYSTEM</span>
-          <h3>System Proxy Manager</h3>
-          <p>Edit and save proxy variables for HTTP/HTTPS/FTP and no-proxy.</p>
+    <section class="section container reveal" data-reveal>
+      <div class="split">
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>Snapshot</h3>
+          <div class="list">
+            <span><strong>Platform:</strong> Linux</span>
+            <span><strong>Stack:</strong> Python 3.7+, PyQt6/5</span>
+            <span><strong>Focus:</strong> Proxy toggles, package manager configs</span>
+          </div>
         </div>
-        <div class="project-card">
-          <span class="project-tag">APT</span>
-          <h3>Package Managers</h3>
+        <div class="terminal">
+          <div><span class="prompt">$</span> runtime</div>
+          <div class="hint">python3, pyqt6 or pyqt5</div>
+          <div><span class="prompt">$</span> auth</div>
+          <div class="hint">pkexec / root</div>
+          <div><span class="prompt">$</span> repo</div>
+          <div class="hint">github.com/cryptd7777/ProxyMaster</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container reveal" data-reveal>
+      <h2 class="section-title">Core features</h2>
+      <p class="section-subtitle">A centralized UI for editing proxy settings across system and package tools.</p>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>System proxy manager</h3>
+          <p>Edit and store proxy variables for HTTP, HTTPS, FTP, and no-proxy rules.</p>
+        </div>
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>Package managers</h3>
           <p>Apply proxy rules to apt, dnf, pacman, and zypper.</p>
         </div>
-        <div class="project-card">
-          <span class="project-tag">ENV</span>
-          <h3>Quick Controls</h3>
-          <p>Toggle proxy on/off and reuse saved proxy history.</p>
-        </div>
-        <div class="project-card">
-          <span class="project-tag">UX</span>
-          <h3>Theme + Logs</h3>
-          <p>Dark/light themes and a command log for clear feedback.</p>
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>Quick controls</h3>
+          <p>Toggle proxy on or off and reuse saved history.</p>
         </div>
       </div>
     </section>
 
-    <section class="section container">
-      <h2>Requirements</h2>
-      <p>Linux, Python 3.7+, PyQt6 (or PyQt5), and pkexec for system changes.</p>
-      <p><a href="https://github.com/cryptd7777/ProxyMaster">GitHub Repository</a></p>
-      <div class="terminal-panel">
-        <div class="terminal-header">
-          <span class="terminal-dot"></span>
-          <span class="terminal-dot"></span>
-          <span class="terminal-dot"></span>
-        </div>
-        <div class="terminal-line"><span>$</span> runtime</div>
-        <div class="terminal-line">python3 · pyside6</div>
-        <div class="terminal-line"><span>$</span> auth</div>
-        <div class="terminal-line">pkexec / root</div>
+    <section class="section container reveal" data-reveal>
+      <div class="card">
+        <div class="card-topline"></div>
+        <h3>Repository</h3>
+        <p>Source, issues, and future releases live on GitHub.</p>
+        <p><a class="inline-link" href="https://github.com/cryptd7777/ProxyMaster">github.com/cryptd7777/ProxyMaster</a></p>
       </div>
     </section>
   </main>
 
   <footer class="footer container">
-    <p>Back to <a href="../../projects.html">Projects</a></p>
+    <p>Back to <a class="inline-link" href="../../projects.html">Projects</a></p>
   </footer>
 
   <script src="../../js/main.js"></script>

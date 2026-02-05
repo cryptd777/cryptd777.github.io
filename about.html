@@ -4,16 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | cryptd777</title>
+  <meta name="description" content="About cryptd777: Linux-first open-source builder focused on performance, clarity, and reliable UX." />
+  <meta property="og:title" content="About | cryptd777" />
+  <meta property="og:description" content="Linux-first open-source builder focused on performance, clarity, and reliable UX." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
     <div class="container nav">
       <a class="brand" href="index.html">
-        <span class="brand-mark"></span>
+        <span class="brand-mark">c7</span>
         <span>cryptd777</span>
       </a>
       <nav class="nav-links">
@@ -27,36 +31,59 @@
 
   <main>
     <section class="page-hero container">
-      <h1>About</h1>
-      <p>Open source builder creating for fun, not for money.</p>
+      <p class="kicker">About</p>
+      <h1>Building Linux tools with intent</h1>
+      <p>Open-source builder focused on performance, clarity, and reliable UX. Everything ships with documentation and a path to recovery when things go wrong.</p>
     </section>
 
-    <section class="section container">
-      <h2>Working style</h2>
-      <p>
-        I build because I enjoy it. Everything here is open source, made for learning,
-        sharing, and pushing ideas forward without monetization goals.
-      </p>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <h3>Design with intent</h3>
-          <p>Every element must earn its place and support usability first.</p>
+    <section class="section container reveal" data-reveal>
+      <h2 class="section-title">Principles</h2>
+      <p class="section-subtitle">The rules that guide every project from prototype to release.</p>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>Speed over fluff</h3>
+          <p>Minimal dependencies and fast startup times keep the tools comfortable on real machines.</p>
         </div>
-        <div class="timeline-item">
-          <h3>Build for speed</h3>
-          <p>Optimized structure, minimal dependencies, and fast time-to-render.</p>
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>Safety first</h3>
+          <p>Permissions, validation, and clear logging prevent surprises and keep data safe.</p>
         </div>
-        <div class="timeline-item">
+        <div class="card">
+          <div class="card-topline"></div>
           <h3>Ship and refine</h3>
-          <p>Iterate quickly, then stabilize and document for long-term use.</p>
+          <p>Release early, then iterate. Document changes and keep UX approachable.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container reveal" data-reveal>
+      <div class="split">
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>Toolchain</h3>
+          <div class="list">
+            <span><strong>Languages:</strong> Python, JavaScript, Shell</span>
+            <span><strong>UI:</strong> CustomTkinter, Electron, Qt</span>
+            <span><strong>Packaging:</strong> DEB, AppImage, PyInstaller</span>
+            <span><strong>Sync Engine:</strong> rclone</span>
+          </div>
+        </div>
+        <div class="terminal">
+          <div><span class="prompt">$</span> whoami</div>
+          <div class="hint">cryptd777</div>
+          <div><span class="prompt">$</span> mission</div>
+          <div class="hint">Build Linux-first tools with real-world polish</div>
+          <div><span class="prompt">$</span> status</div>
+          <div class="hint">Open source. Shipping often.</div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer container">
-    <p>Want to collaborate? I'm open to meaningful work.</p>
+    <p>Open to meaningful collaboration and high-quality OSS work.</p>
   </footer>
 
   <script src="js/main.js"></script>

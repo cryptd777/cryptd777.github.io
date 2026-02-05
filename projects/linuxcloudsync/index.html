@@ -4,16 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LinuxCloudSync | cryptd777</title>
+  <meta name="description" content="LinuxCloudSync is a professional Linux sync client with profiles, three sync modes, and one-click recovery for bisync errors." />
+  <meta property="og:title" content="LinuxCloudSync | cryptd777" />
+  <meta property="og:description" content="Professional Linux sync client with profiles, three sync modes, and one-click recovery." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css" />
 </head>
-<body class="running-page lcs-page">
+<body>
   <header>
     <div class="container nav">
       <a class="brand" href="../../index.html">
-        <span class="brand-mark"></span>
+        <span class="brand-mark">c7</span>
         <span>cryptd777</span>
       </a>
       <nav class="nav-links">
@@ -27,129 +31,114 @@
 
   <main>
     <section class="page-hero container">
+      <p class="kicker">Running</p>
       <h1>LinuxCloudSync</h1>
-      <p>Sync and backup tooling tuned for Linux performance and control.</p>
+      <p>Professional Linux sync client with profiles, three sync modes, and one-click recovery for bisync errors.</p>
+      <div class="meta-row">
+        <span class="badge live">Live since Feb 5, 2026</span>
+        <span class="badge">Version 0.0.3</span>
+      </div>
     </section>
 
-    <section class="section container split-layout">
-      <div class="terminal-panel">
-        <div class="terminal-header">
-          <span class="terminal-dot"></span>
-          <span class="terminal-dot"></span>
-          <span class="terminal-dot"></span>
+    <section class="section container reveal" data-reveal>
+      <div class="split">
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>Snapshot</h3>
+          <div class="list">
+            <span><strong>Platforms:</strong> Linux, AMD64, ARM64, ARMHF, i386</span>
+            <span><strong>Cloud Targets:</strong> Google Drive, OneDrive</span>
+            <span><strong>Stack:</strong> rclone 1.65.2, CustomTkinter, PyInstaller</span>
+            <span><strong>Install:</strong> One-click DEB package</span>
+          </div>
         </div>
-        <div class="terminal-line"><span>$</span> status</div>
-        <div class="terminal-line"><span class="project-tag running">RUNNING</span></div>
-        <div class="terminal-line"><span>$</span> focus</div>
-        <div class="terminal-line">speed · privacy · linux-first</div>
-        <div class="terminal-line"><span>$</span> live</div>
-        <div class="terminal-line">Live since February 5, 2026</div>
-        <div class="terminal-line"><span>$</span> stack</div>
-        <div class="terminal-line">rclone 1.65.2 · CustomTkinter · PyInstaller</div>
-      </div>
-      <div class="snapshot-card">
-        <h3>Snapshot</h3>
-        <div class="snapshot-grid">
-          <div class="snapshot-item">
-            <span class="snapshot-label">Version</span>
-            <span class="snapshot-value">0.0.3 Professional Edition</span>
-          </div>
-          <div class="snapshot-item">
-            <span class="snapshot-label">Platforms</span>
-            <span class="snapshot-value">Linux · AMD64 · ARM64 · ARMHF · i386</span>
-          </div>
-          <div class="snapshot-item">
-            <span class="snapshot-label">Sync Targets</span>
-            <span class="snapshot-value">Google Drive · OneDrive</span>
-          </div>
-          <div class="snapshot-item">
-            <span class="snapshot-label">Security</span>
-            <span class="snapshot-value">0600 credentials · path restrictions · validation</span>
-          </div>
+        <div class="terminal">
+          <div><span class="prompt">$</span> install</div>
+          <div class="hint">sudo dpkg -i github.cryptd777.linuxcloudsync_*.deb</div>
+          <div><span class="prompt">$</span> launch</div>
+          <div class="hint">lcs</div>
+          <div><span class="prompt">$</span> repo</div>
+          <div class="hint">github.com/cryptd777/LinuxCloudSync</div>
         </div>
       </div>
     </section>
 
-    <section class="section container">
-      <h2>Highlights</h2>
-      <p>Professional Linux sync client with profiles, multiple sync modes, and safe recovery tools.</p>
-      <div class="projects">
-        <div class="project-card">
-          <span class="project-tag">PROFILES</span>
-          <h3>Sync Profiles</h3>
-          <p>Save and load configurations for quick reuse.</p>
+    <section class="section container reveal" data-reveal>
+      <h2 class="section-title">Highlights</h2>
+      <p class="section-subtitle">Built to keep Linux sync workflows fast, predictable, and easy to recover.</p>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>Sync profiles</h3>
+          <p>Save and load configurations for instant reuse.</p>
         </div>
-        <div class="project-card">
-          <span class="project-tag">MODES</span>
-          <h3>Three Sync Modes</h3>
-          <p>Bidirectional, Cloud to Local, or Local to Cloud.</p>
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>Three sync modes</h3>
+          <p>Bidirectional, Cloud to Local, and Local to Cloud workflows.</p>
         </div>
-        <div class="project-card">
-          <span class="project-tag">RECOVERY</span>
+        <div class="card">
+          <div class="card-topline"></div>
           <h3>Force Resync</h3>
           <p>One-click fix for bisync baseline errors.</p>
         </div>
-        <div class="project-card">
-          <span class="project-tag">CONTROL</span>
-          <h3>Advanced Options</h3>
-          <p>Bandwidth limits, dry run mode, exclude patterns, and logs.</p>
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>Advanced controls</h3>
+          <p>Bandwidth limits, dry run mode, exclude patterns, and detailed logs.</p>
         </div>
-        <div class="project-card">
-          <span class="project-tag">PORTABLE</span>
-          <h3>Zero Dependencies</h3>
-          <p>Bundles rclone and ships as a single DEB package.</p>
-        </div>
-      </div>
-      <p class="inline-meta">Version 0.0.3 Professional Edition, released February 5, 2026.</p>
-    </section>
-
-    <section class="section container">
-      <h2>Download</h2>
-      <p>Latest releases are published on GitHub with DEB packages for Linux.</p>
-      <p><a class="link-inline download-link" href="https://github.com/cryptd777/LinuxCloudSync">View on GitHub</a></p>
-      <div class="terminal-panel compact">
-        <div class="terminal-header">
-          <span class="terminal-dot"></span>
-          <span class="terminal-dot"></span>
-          <span class="terminal-dot"></span>
-        </div>
-        <div class="terminal-line"><span>$</span> install</div>
-        <div class="terminal-line">sudo dpkg -i github.cryptd777.linuxcloudsync_*.deb</div>
-      </div>
-      <p class="inline-meta">Supports AMD64, ARM64, ARMHF, and i386.</p>
-    </section>
-
-    <section class="section container">
-      <h2>Quick Start</h2>
-      <p>Launch <span class="inline-code">lcs</span>, connect a cloud, select a local folder, then run Force Resync once before your first sync.</p>
-      <div class="terminal-panel compact">
-        <div class="terminal-header">
-          <span class="terminal-dot"></span>
-          <span class="terminal-dot"></span>
-          <span class="terminal-dot"></span>
-        </div>
-        <div class="terminal-line"><span>$</span> connect</div>
-        <div class="terminal-line">Google Drive or OneDrive</div>
-        <div class="terminal-line"><span>$</span> setup</div>
-        <div class="terminal-line">Pick local folder · choose sync mode</div>
-        <div class="terminal-line"><span>$</span> baseline</div>
-        <div class="terminal-line">Click Force Resync (first run)</div>
-        <div class="terminal-line"><span>$</span> sync</div>
-        <div class="terminal-line">Run Dry Run, then Start Sync</div>
-        <div class="terminal-line"><span>$</span> save</div>
-        <div class="terminal-line">Save Profile for reuse</div>
       </div>
     </section>
 
-    <section class="section container">
-      <h2>Security</h2>
-      <p>Built with safe defaults: input validation, restricted paths, secure permissions on credentials, and clean shutdown behavior.</p>
-      <p class="inline-meta">Credentials stored with 0600 permissions.</p>
+    <section class="section container reveal" data-reveal>
+      <h2 class="section-title">Quick start</h2>
+      <p class="section-subtitle">Launch <span class="inline-code">lcs</span>, connect your cloud, then baseline once before your first sync.</p>
+      <div class="terminal">
+        <div><span class="prompt">$</span> connect</div>
+        <div class="hint">Google Drive or OneDrive</div>
+        <div><span class="prompt">$</span> setup</div>
+        <div class="hint">Select local folder and sync mode</div>
+        <div><span class="prompt">$</span> baseline</div>
+        <div class="hint">Click Force Resync (first run)</div>
+        <div><span class="prompt">$</span> sync</div>
+        <div class="hint">Dry Run, then Start Sync</div>
+      </div>
+    </section>
+
+    <section class="section container reveal" data-reveal>
+      <h2 class="section-title">Security</h2>
+      <p class="section-subtitle">Input validation, restricted paths, and secure credential permissions (0600).</p>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>Safe defaults</h3>
+          <p>Path restrictions prevent risky sync targets by default.</p>
+        </div>
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>Clean permissions</h3>
+          <p>Credentials are stored with 0600 permissions.</p>
+        </div>
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>Clear logs</h3>
+          <p>Timestamped logging makes troubleshooting fast.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container reveal" data-reveal>
+      <div class="card">
+        <div class="card-topline"></div>
+        <h3>Repository</h3>
+        <p>Source code, releases, and issue tracking live on GitHub.</p>
+        <p><a class="inline-link" href="https://github.com/cryptd777/LinuxCloudSync">github.com/cryptd777/LinuxCloudSync</a></p>
+      </div>
     </section>
   </main>
 
   <footer class="footer container">
-    <p>Back to <a href="../../projects.html">Projects</a></p>
+    <p>Back to <a class="inline-link" href="../../projects.html">Projects</a></p>
   </footer>
 
   <script src="../../js/main.js"></script>

@@ -4,16 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cryptowser | cryptd777</title>
+  <meta name="description" content="Cryptowser is a privacy-focused Electron browser optimized for lightweight Linux systems." />
+  <meta property="og:title" content="Cryptowser | cryptd777" />
+  <meta property="og:description" content="Privacy-focused Electron browser optimized for lightweight Linux systems." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css" />
 </head>
-<body class="running-page">
+<body>
   <header>
     <div class="container nav">
       <a class="brand" href="../../index.html">
-        <span class="brand-mark"></span>
+        <span class="brand-mark">c7</span>
         <span>cryptd777</span>
       </a>
       <nav class="nav-links">
@@ -27,69 +31,71 @@
 
   <main>
     <section class="page-hero container">
+      <p class="kicker">Running</p>
       <h1>Cryptowser</h1>
-      <p>A lightweight, privacy-focused desktop browser built with Electron.</p>
-    </section>
-
-    <section class="section container">
-      <div class="terminal-panel">
-        <div class="terminal-header">
-          <span class="terminal-dot"></span>
-          <span class="terminal-dot"></span>
-          <span class="terminal-dot"></span>
-        </div>
-        <div class="terminal-line"><span>$</span> status</div>
-        <div class="terminal-line"><span class="project-tag running">RUNNING</span></div>
-        <div class="terminal-line"><span>$</span> stack</div>
-        <div class="terminal-line">Electron · Linux</div>
-        <div class="terminal-line"><span>$</span> highlights</div>
-        <div class="terminal-line">1GB RAM ready · ad/tracker blocking · ARM64 support</div>
+      <p>Privacy-focused Electron browser built to stay fast on low-resource Linux systems.</p>
+      <div class="meta-row">
+        <span class="badge">Production-ready</span>
       </div>
     </section>
 
-    <section class="section container">
-      <h2>Core Features</h2>
-      <p>Built to run fast on low-resource Linux systems while keeping privacy front and center.</p>
-      <div class="projects">
-        <div class="project-card">
-          <span class="project-tag">LIGHTWEIGHT</span>
-          <h3>Ultra Low Footprint</h3>
-          <p>Runs smoothly on devices with just 1GB RAM and a small install size.</p>
+    <section class="section container reveal" data-reveal>
+      <div class="split">
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>Snapshot</h3>
+          <div class="list">
+            <span><strong>Platform:</strong> Linux (AMD64, ARM64)</span>
+            <span><strong>Stack:</strong> Electron</span>
+            <span><strong>Focus:</strong> Privacy, speed, lightweight UI</span>
+            <span><strong>Packages:</strong> AppImage, DEB</span>
+          </div>
         </div>
-        <div class="project-card">
-          <span class="project-tag">PRIVACY</span>
-          <h3>Privacy First</h3>
-          <p>Built-in ad blocking, tracker blocking, and Do-Not-Track / GPC headers.</p>
-        </div>
-        <div class="project-card">
-          <span class="project-tag">LINUX</span>
-          <h3>Linux & ARM64 Ready</h3>
-          <p>Supports AMD64 and ARM64, perfect for Raspberry Pi and lightweight desktops.</p>
+        <div class="terminal">
+          <div><span class="prompt">$</span> release</div>
+          <div class="hint">v1.0.1</div>
+          <div><span class="prompt">$</span> packages</div>
+          <div class="hint">AppImage, DEB</div>
+          <div><span class="prompt">$</span> repo</div>
+          <div class="hint">github.com/cryptd777/cryptowser</div>
         </div>
       </div>
     </section>
 
-    <section class="section container">
-      <h2>Download</h2>
-      <p>Latest release available as AppImage and DEB packages for AMD64 and ARM64.</p>
-      <p><a class="link-inline download-link" href="https://github.com/cryptd777/cryptowser">Download on GitHub</a></p>
-      <p class="inline-meta">Open source, no monetization — built for fun.</p>
-      <div class="terminal-panel">
-        <div class="terminal-header">
-          <span class="terminal-dot"></span>
-          <span class="terminal-dot"></span>
-          <span class="terminal-dot"></span>
+    <section class="section container reveal" data-reveal>
+      <h2 class="section-title">Core features</h2>
+      <p class="section-subtitle">Built for speed and privacy without heavy resource usage.</p>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>Ultra low footprint</h3>
+          <p>Runs smoothly on machines with 1GB RAM.</p>
         </div>
-        <div class="terminal-line"><span>$</span> release</div>
-        <div class="terminal-line">v1.0.1</div>
-        <div class="terminal-line"><span>$</span> packages</div>
-        <div class="terminal-line">AppImage · DEB</div>
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>Privacy first</h3>
+          <p>Built-in ad and tracker blocking with privacy-focused defaults.</p>
+        </div>
+        <div class="card">
+          <div class="card-topline"></div>
+          <h3>ARM64 ready</h3>
+          <p>Supports Raspberry Pi and lightweight desktops.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container reveal" data-reveal>
+      <div class="card">
+        <div class="card-topline"></div>
+        <h3>Repository</h3>
+        <p>Download the latest release on GitHub.</p>
+        <p><a class="inline-link" href="https://github.com/cryptd777/cryptowser">github.com/cryptd777/cryptowser</a></p>
       </div>
     </section>
   </main>
 
   <footer class="footer container">
-    <p>Back to <a href="../../projects.html">Projects</a></p>
+    <p>Back to <a class="inline-link" href="../../projects.html">Projects</a></p>
   </footer>
 
   <script src="../../js/main.js"></script>
