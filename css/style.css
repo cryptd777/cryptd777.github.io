@@ -136,20 +136,10 @@ header {
   margin-bottom: 26px;
 }
 
-.quote {
-  margin-top: 20px;
-  padding-left: 16px;
-  border-left: 3px solid var(--accent);
-  color: var(--muted);
-  font-style: italic;
-}
-
-.quote cite {
-  display: block;
-  margin-top: 8px;
-  font-style: normal;
-  color: var(--accent);
-  font-weight: 600;
+.quote-panel {
+  margin-top: 22px;
+  background: color-mix(in srgb, var(--panel) 85%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
 }
 
 .hero-actions {
