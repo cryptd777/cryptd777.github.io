@@ -246,6 +246,36 @@ header {
   margin-bottom: 14px;
 }
 
+.project-tag.live {
+  background: rgba(76, 255, 106, 0.18);
+  color: var(--accent);
+  border: 1px solid rgba(76, 255, 106, 0.4);
+}
+
+.project-tag.dev {
+  background: rgba(89, 173, 255, 0.18);
+  color: #73b9ff;
+  border: 1px solid rgba(89, 173, 255, 0.4);
+}
+
+.project-tag.paused {
+  background: rgba(255, 180, 64, 0.18);
+  color: #ffb44a;
+  border: 1px solid rgba(255, 180, 64, 0.4);
+}
+
+.project-tag.running {
+  background: rgba(155, 255, 146, 0.18);
+  color: #9bff92;
+  border: 1px solid rgba(155, 255, 146, 0.4);
+}
+
+.project-tag.ux {
+  background: rgba(140, 120, 255, 0.18);
+  color: #b3a4ff;
+  border: 1px solid rgba(140, 120, 255, 0.4);
+}
+
 .project-status {
   color: var(--muted);
   font-size: 0.9rem;
@@ -257,6 +287,20 @@ header {
   color: var(--muted);
   font-size: 0.95rem;
   border-top: 1px solid var(--border);
+}
+
+.paused-page .hero,
+.paused-page .page-hero {
+  color: #ffcf7a;
+}
+
+.paused-page .terminal-panel {
+  border-color: rgba(255, 180, 64, 0.5);
+  box-shadow: 0 0 24px rgba(255, 180, 64, 0.15);
+}
+
+.paused-page .terminal-line span {
+  color: #ffb44a;
 }
 
 .page-hero {
