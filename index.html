@@ -10,7 +10,7 @@
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -21,7 +21,7 @@
         <span>cryptd777</span>
       </a>
       <nav class="nav-links">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
@@ -31,42 +31,52 @@
 
   <main>
     <section class="hero container">
-      <div class="reveal" data-reveal>
+      <div class="hero-left reveal" data-reveal>
         <p class="kicker">Open-source builder</p>
         <h1 class="hero-title">Linux-first tools with <span>real-world polish</span>.</h1>
         <p class="hero-text">
           I build practical desktop utilities and sync tools for Linux. Everything is open source,
           documented, and designed for speed, clarity, and control.
         </p>
-        <blockquote class="arabic-quote" dir="rtl" lang="ar">
-          المعرفة تزدهر حين تُشارك
-          <span class="arabic-attrib">حكمة عربية</span>
-        </blockquote>
-        <div class="button-row">
+        <div class="hero-actions">
           <a class="button primary" href="projects.html">View Projects</a>
           <a class="button secondary" href="contact.html">Contact</a>
         </div>
+        <div class="signal-row">
+          <span class="badge live">Shipping since Feb 5, 2026</span>
+          <span class="badge">OSS focus</span>
+        </div>
       </div>
-      <div class="hero-card reveal" data-reveal>
-        <div>
-          <p class="kicker">Now live</p>
-          <h3>LinuxCloudSync</h3>
-          <p class="section-subtitle">Professional Linux sync client with profiles, multiple sync modes, and one-click recovery.</p>
+
+      <div class="hero-right reveal" data-reveal>
+        <div class="hero-panel">
+          <div class="panel-head">
+            <p class="kicker">Featured build</p>
+            <h3>LinuxCloudSync</h3>
+            <p class="section-subtitle">Professional Linux sync client with profiles, multiple sync modes, and one-click recovery.</p>
+          </div>
+          <div class="meta-row">
+            <span class="badge live">Live since Feb 5, 2026</span>
+            <span class="badge">Version 0.0.3</span>
+          </div>
+          <div class="project-links">
+            <a class="inline-link" href="projects/linuxcloudsync/">Project page</a>
+            <a class="inline-link" href="https://github.com/cryptd777/LinuxCloudSync">GitHub repo</a>
+          </div>
         </div>
-        <div class="meta-row">
-          <span class="badge live">Live since Feb 5, 2026</span>
-          <span class="badge">Version 0.0.3</span>
-        </div>
-        <div class="project-links">
-          <a class="inline-link" href="projects/linuxcloudsync/">Project page</a>
-          <a class="inline-link" href="https://github.com/cryptd777/LinuxCloudSync">GitHub repo</a>
-        </div>
+
+        <blockquote class="arabic-quote" dir="rtl" lang="ar">
+          من وهب العلم فقد وهب القوة
+          <span class="arabic-attrib">قول عربي قديم</span>
+        </blockquote>
       </div>
     </section>
 
     <section class="section container reveal" data-reveal>
-      <h2 class="section-title">Projects in focus</h2>
-      <p class="section-subtitle">Active builds and experiments I am shipping or maintaining right now.</p>
+      <div class="section-head">
+        <h2 class="section-title">Projects in focus</h2>
+        <p class="section-subtitle">Active builds and experiments I am shipping or maintaining right now.</p>
+      </div>
       <div class="card-grid">
         <a class="card project-card" href="projects/cryptowser/">
           <div class="card-topline"></div>
@@ -93,8 +103,10 @@
     </section>
 
     <section class="section container reveal" data-reveal>
-      <h2 class="section-title">Build philosophy</h2>
-      <p class="section-subtitle">Every build is practical first, with a focus on systems that stay fast and easy to trust.</p>
+      <div class="section-head">
+        <h2 class="section-title">Build philosophy</h2>
+        <p class="section-subtitle">Every build is practical first, with a focus on systems that stay fast and easy to trust.</p>
+      </div>
       <div class="card-grid">
         <div class="card">
           <div class="card-topline"></div>
@@ -115,13 +127,24 @@
     </section>
 
     <section class="section container reveal" data-reveal>
-      <div class="card cta-card">
-        <div class="card-topline"></div>
-        <h3>Need a Linux tool built right?</h3>
-        <p class="section-subtitle">I collaborate on focused OSS utilities and desktop apps. If you have a clear problem, I can help ship a clean solution.</p>
-        <div class="button-row">
-          <a class="button primary" href="projects.html">See full projects</a>
-          <a class="button secondary" href="contact.html">Get in touch</a>
+      <div class="cta-grid">
+        <div class="card cta-card">
+          <div class="card-topline"></div>
+          <h3>Need a Linux tool built right?</h3>
+          <p class="section-subtitle">I collaborate on focused OSS utilities and desktop apps. If you have a clear problem, I can help ship a clean solution.</p>
+          <div class="button-row">
+            <a class="button primary" href="projects.html">See full projects</a>
+            <a class="button secondary" href="contact.html">Get in touch</a>
+          </div>
+        </div>
+        <div class="card stats-card">
+          <div class="card-topline"></div>
+          <h3>Open-source rhythm</h3>
+          <ul class="stats-list">
+            <li><strong>3</strong> active projects shipping updates</li>
+            <li><strong>Linux-first</strong> design and testing pipeline</li>
+            <li><strong>Transparent</strong> changelogs and documented builds</li>
+          </ul>
         </div>
       </div>
     </section>
