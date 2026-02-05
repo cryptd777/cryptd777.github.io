@@ -42,10 +42,18 @@ a {
   font-weight: 600;
   border-bottom: 1px dashed color-mix(in srgb, var(--accent) 55%, transparent);
   padding-bottom: 2px;
+  display: inline-block;
 }
 
 .link-inline:hover {
   border-bottom-color: var(--accent);
+}
+
+.download-link {
+  margin-top: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 
 img {
