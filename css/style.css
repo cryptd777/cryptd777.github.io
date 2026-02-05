@@ -12,7 +12,7 @@
   --radius: 18px;
   --mono: "JetBrains Mono", "Fira Code", monospace;
   --sans: "Manrope", "Space Grotesk", "Segoe UI", sans-serif;
-  --arabic: "Amiri", "Scheherazade New", serif;
+  --arabic: "Noto Naskh Arabic", "Amiri", serif;
 }
 
 * {
@@ -57,7 +57,7 @@ img {
   margin: 0 auto;
 }
 
-header {
+.site-header {
   position: sticky;
   top: 0;
   background: rgba(246, 241, 234, 0.86);
