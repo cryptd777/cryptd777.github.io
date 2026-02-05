@@ -138,6 +138,24 @@ header {
   margin-bottom: 26px;
 }
 
+.arabic-quote {
+  margin: 0 0 26px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: rgba(15, 138, 107, 0.08);
+  border: 1px solid rgba(15, 138, 107, 0.25);
+  font-size: 1.1rem;
+  color: var(--ink);
+  line-height: 1.8;
+}
+
+.arabic-quote .arabic-attrib {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
 .button-row {
   display: flex;
   gap: 14px;
