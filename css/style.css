@@ -201,6 +201,10 @@ img {
   gap: 18px;
 }
 
+.hero-panel .signal-row {
+  margin-top: 6px;
+}
+
 .hero-panel h3 {
   font-size: 1.3rem;
 }
@@ -346,11 +350,10 @@ img {
 
 .arabic-quote {
   margin: 0;
-  padding: 18px 22px;
-  border-radius: 14px;
-  background: rgba(15, 138, 107, 0.06);
-  border: 1px solid rgba(15, 138, 107, 0.18);
-  border-right: 4px solid rgba(15, 138, 107, 0.55);
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--border);
   font-family: var(--arabic);
   font-size: clamp(1.25rem, 2.1vw, 1.6rem);
   font-weight: 600;
@@ -360,6 +363,20 @@ img {
   unicode-bidi: plaintext;
   letter-spacing: 0;
   text-rendering: optimizeLegibility;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.arabic-quote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  border-radius: 999px;
 }
 
 .arabic-quote .arabic-attrib {
