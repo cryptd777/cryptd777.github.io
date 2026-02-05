@@ -17,3 +17,35 @@ if (clock) {
   updateClock();
   setInterval(updateClock, 1000);
 }
+
+const countdown = document.querySelector("[data-countdown]");
+if (countdown) {
+  const launchDate = countdown.getAttribute("data-countdown");
+  const target = new Date(launchDate).getTime();
+  const label = countdown.getAttribute("data-countdown-label") || "Launch";
+
+  const updateCountdown = () => {
+    const now = Date.now();
+    const diff = target - now;
+
+    if (Number.isNaN(target)) {
+      countdown.textContent = "Launch date not set.";
+      return;
+    }
+
+    if (diff <= 0) {
+      countdown.textContent = `${label}: LIVE`;
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const mins = Math.floor((diff / (1000 * 60)) % 60);
+    const secs = Math.floor((diff / 1000) % 60);
+
+    countdown.textContent = `${label}: ${days}d ${hours}h ${mins}m ${secs}s`;
+  };
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+}
