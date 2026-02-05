@@ -18,11 +18,20 @@ if (clock) {
   setInterval(updateClock, 1000);
 }
 
-const countdown = document.querySelector("[data-countdown]");
-if (countdown) {
-  const launchDate = countdown.getAttribute("data-countdown");
-  const target = new Date(launchDate).getTime();
+const countdownEls = document.querySelectorAll("[data-countdown]");
+countdownEls.forEach((countdown) => {
+  const raw = countdown.getAttribute("data-countdown");
   const label = countdown.getAttribute("data-countdown-label") || "Launch";
+
+  const parseDate = (value) => {
+    const direct = Date.parse(value);
+    if (!Number.isNaN(direct)) return direct;
+    const withZ = Date.parse(`${value}Z`);
+    if (!Number.isNaN(withZ)) return withZ;
+    return Number.NaN;
+  };
+
+  const target = parseDate(raw);
 
   const updateCountdown = () => {
     const now = Date.now();
@@ -48,4 +57,4 @@ if (countdown) {
 
   updateCountdown();
   setInterval(updateCountdown, 1000);
-}
+});
