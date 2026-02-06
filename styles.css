@@ -157,7 +157,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 h1, h2, h3 { margin: 0; line-height: 1.2; }
-p { margin: 0; color: var(--muted); }
+p { margin: 0; color: var(--muted); line-height: 1.6; }
 
 .eyebrow {
   font-size: 0.72rem;
@@ -166,7 +166,12 @@ p { margin: 0; color: var(--muted); }
   color: var(--muted);
 }
 
-.badge-group { display: flex; flex-wrap: wrap; gap: 8px; }
+.badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 12px;
+}
 .badge {
   padding: 6px 12px;
   border-radius: 999px;
@@ -174,6 +179,17 @@ p { margin: 0; color: var(--muted); }
   border: 1px solid var(--border);
   font-size: 0.82rem;
   color: #475569;
+  line-height: 1;
+}
+.badge-group + h3,
+.badge-group + h2,
+.badge-group + h1 {
+  margin-top: 12px;
+}
+h3 + p,
+h2 + p,
+h1 + p {
+  margin-top: 10px;
 }
 
 .stat-strip { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
