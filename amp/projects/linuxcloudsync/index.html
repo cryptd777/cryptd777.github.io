@@ -1,0 +1,156 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LinuxCloudSync | cryptd777</title>
+  <link rel="canonical" href="https://cryptd777.github.io/projects/linuxcloudsync/index.html">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta name="description" content="LinuxCloudSync is a Linux cloud sync client with profiles, three sync modes, and recovery tooling.">
+  <meta name="author" content="cryptd777">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0d1117">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="cryptd777">
+  <meta property="og:title" content="LinuxCloudSync | cryptd777">
+  <meta property="og:description" content="LinuxCloudSync is a Linux cloud sync client with profiles, three sync modes, and recovery tooling.">
+  <meta property="og:url" content="https://cryptd777.github.io/projects/linuxcloudsync/index.html">
+  <meta property="og:image" content="https://cryptd777.github.io/assets/og-default.svg">
+  <meta property="og:image:alt" content="C7 Linux-first portfolio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LinuxCloudSync | cryptd777">
+  <meta name="twitter:description" content="LinuxCloudSync is a Linux cloud sync client with profiles, three sync modes, and recovery tooling.">
+  <meta name="twitter:image" content="https://cryptd777.github.io/assets/og-default.svg">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "LinuxCloudSync",
+      "description": "Linux cloud sync client with profiles, three sync modes, and recovery tooling.",
+      "keywords": "linux cloud sync, rclone gui linux, linux sync client",
+      "operatingSystem": "Linux",
+      "applicationCategory": "UtilitiesApplication",
+      "url": "https://cryptd777.github.io/projects/linuxcloudsync/index.html",
+      "publisher": {
+        "@type": "Person",
+        "name": "cryptd777",
+        "url": "https://cryptd777.github.io/"
+      }
+    }
+  </script>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <style amp-boilerplate>
+    body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}
+    @-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    @-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    @-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    @-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    @keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+  </style>
+  <noscript>
+    <style amp-boilerplate>
+      body{visibility:visible}
+    </style>
+  </noscript>
+<style amp-custom>
+    :root{
+      --bg:#0d1117;
+      --bg-elev:#0b0f14;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --muted-2:#6b7280;
+      --accent:#2ea043;
+      --accent-2:#58a6ff;
+      --radius:18px;
+      --space-1:8px;
+      --space-2:12px;
+      --space-3:16px;
+      --space-4:24px;
+      --space-5:32px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 var(--space-4)}
+    header{position:sticky;top:0;background:linear-gradient(135deg, rgba(17,24,39,0.92), rgba(13,17,23,0.96));border-bottom:1px solid rgba(88,166,255,0.15);z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{height:44px;width:44px;border-radius:14px;background:radial-gradient(circle at top, rgba(46,160,67,0.35), rgba(46,160,67,0.08));border:1px solid rgba(46,160,67,0.5);display:grid;place-items:center;color:#d1fae5;font-weight:800;letter-spacing:1px;box-shadow:0 0 20px rgba(46,160,67,0.2)}
+    .brand-text small{display:block;color:var(--muted);text-transform:uppercase;letter-spacing:0.28em;font-size:10px}
+    .brand-text span{display:block;color:var(--muted-2);font-size:12px;margin-top:2px}
+    .nav-links{display:flex;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+    .nav-links a{padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.08);background:rgba(15,23,42,0.6)}
+    .nav-links a:hover{color:#fff;border-color:rgba(88,166,255,0.5)}
+    .grid{display:grid;gap:var(--space-4)}
+    .card{background:var(--bg-elev);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);padding:var(--space-4)}
+    h1{font-size:34px;margin:12px 0 8px}
+    h2{font-size:22px;margin:0 0 8px}
+    h3{font-size:18px;margin:0 0 6px}
+    p{color:var(--muted);line-height:1.6}
+    .pill{display:inline-flex;align-items:center;padding:6px 12px;border-radius:999px;background:rgba(46,160,67,0.12);color:var(--accent);font-size:12px;margin-right:6px}
+    .pill.blue{background:rgba(88,166,255,0.12);color:var(--accent-2)}
+    .footer{border-top:1px solid rgba(255,255,255,0.06);margin-top:var(--space-5);padding:24px 0;text-align:center;color:var(--muted-2);font-size:12px}
+    @media (max-width:720px){
+      h1{font-size:28px}
+      .nav-links{flex-wrap:wrap;gap:10px;justify-content:flex-end}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">C7</div>
+        <div class="brand-text">
+          <small>cryptd777</small>
+          <span>Linux-first builder</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="../../index.html">Home</a>
+        <a href="../../projects.html">Projects</a>
+        <a href="../../about.html">About</a>
+        <a href="../../contact.html">Contact</a>
+        <a href="https://github.com/cryptd777/LinuxCloudSync">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="margin-top:32px">
+    <section class="card">
+      <h1>LinuxCloudSync</h1>
+      <p>Linux cloud sync client with profiles, three modes, and recovery tooling.</p>
+      <div style="margin-top:10px">
+        <span class="pill">DEB</span>
+        <span class="pill blue">rclone</span>
+        <span class="pill">Linux</span>
+      </div>
+    </section>
+
+    <section class="grid" style="margin-top:24px">
+      <div class="card">
+        <h2>Snapshot</h2>
+        <p><strong>Platforms:</strong> Linux (AMD64, ARM64, ARMHF, i386)</p>
+        <p><strong>Cloud targets:</strong> Google Drive, OneDrive</p>
+        <p><strong>Stack:</strong> Python, rclone (Linux sync)</p>
+        <p><strong>Install:</strong> One-click DEB package</p>
+      </div>
+      <div class="card">
+        <h2>Highlights</h2>
+        <p>Save and reuse configurations instantly.</p>
+        <p>One-click fixes for bisync baseline errors.</p>
+        <p>Restricted paths and clear logs for fast troubleshooting.</p>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:24px">
+      <h2>Repository</h2>
+      <p>Source code and releases live on GitHub.</p>
+      <p><a style="color:var(--accent-2)" href="https://github.com/cryptd777/LinuxCloudSync">github.com/cryptd777/LinuxCloudSync</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2026 cryptd777. Built for the Linux community.
+  </footer>
+</body>
+</html>
