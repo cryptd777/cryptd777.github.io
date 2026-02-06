@@ -1,24 +1,25 @@
 const path = location.pathname;
 const current = path.split("/").filter(Boolean).pop() || "index.html";
 
-const navLinks = document.querySelectorAll(".nav-links a");
+const navLinks = document.querySelectorAll("#nav a");
 navLinks.forEach((link) => {
   const href = link.getAttribute("href");
   if (!href) return;
+  const normalized = href.split("/").filter(Boolean).pop() || href;
 
-  if (href === "index.html" && (current === "index.html" || path === "/")) {
+  if (normalized === "index.html" && (current === "index.html" || path === "/")) {
     link.classList.add("active");
     link.setAttribute("aria-current", "page");
     return;
   }
 
-  if (href === "projects.html" && (current === "projects.html" || path.includes("/projects/"))) {
+  if (normalized === "projects.html" && (current === "projects.html" || path.includes("/projects/"))) {
     link.classList.add("active");
     link.setAttribute("aria-current", "page");
     return;
   }
 
-  if (href === current) {
+  if (normalized === current) {
     link.classList.add("active");
     link.setAttribute("aria-current", "page");
   }

@@ -10,81 +10,78 @@
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="index.html">
-        <span class="brand-mark">c7</span>
-        <span>cryptd777</span>
-      </a>
-      <nav class="nav-links">
+  <div id="wrapper">
+    <header id="header" class="small">
+      <div class="logo">c7</div>
+      <h1>About</h1>
+      <p>Building Linux tools with intent. Focused on performance, clarity, and reliable UX with recovery paths built in.</p>
+    </header>
+
+    <nav id="nav">
+      <div class="inner">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="page-hero container">
-      <p class="kicker">About</p>
-      <h1>Building Linux tools with intent</h1>
-      <p>Open-source builder focused on performance, clarity, and reliable UX. Everything ships with documentation and a path to recovery when things go wrong.</p>
-    </section>
-
-    <section class="section container reveal" data-reveal>
-      <h2 class="section-title">Principles</h2>
-      <p class="section-subtitle">The rules that guide every project from prototype to release.</p>
-      <div class="card-grid">
-        <div class="card">
-          <div class="card-topline"></div>
-          <h3>Speed over fluff</h3>
-          <p>Minimal dependencies and fast startup times keep the tools comfortable on real machines.</p>
-        </div>
-        <div class="card">
-          <div class="card-topline"></div>
-          <h3>Safety first</h3>
-          <p>Permissions, validation, and clear logging prevent surprises and keep data safe.</p>
-        </div>
-        <div class="card">
-          <div class="card-topline"></div>
-          <h3>Ship and refine</h3>
-          <p>Release early, then iterate. Document changes and keep UX approachable.</p>
-        </div>
       </div>
-    </section>
+    </nav>
 
-    <section class="section container reveal" data-reveal>
-      <div class="split">
-        <div class="card">
-          <div class="card-topline"></div>
-          <h3>Toolchain</h3>
-          <div class="list">
-            <span><strong>Languages:</strong> Python, JavaScript, Shell</span>
-            <span><strong>UI:</strong> CustomTkinter, Electron, Qt</span>
-            <span><strong>Packaging:</strong> DEB, AppImage, PyInstaller</span>
-            <span><strong>Sync Engine:</strong> rclone</span>
+    <main id="main" class="inner">
+      <section class="section reveal" data-reveal>
+        <div class="section-header">
+          <h2>Principles</h2>
+          <p>The rules that guide every project from prototype to release.</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <h3>Speed over fluff</h3>
+            <p>Minimal dependencies and fast startup times keep tools comfortable on real machines.</p>
+          </div>
+          <div class="card">
+            <h3>Safety first</h3>
+            <p>Permissions, validation, and clear logging prevent surprises and keep data safe.</p>
+          </div>
+          <div class="card">
+            <h3>Ship and refine</h3>
+            <p>Release early, then iterate. Document changes and keep UX approachable.</p>
           </div>
         </div>
-        <div class="terminal">
-          <div><span class="prompt">$</span> whoami</div>
-          <div class="hint">cryptd777</div>
-          <div><span class="prompt">$</span> mission</div>
-          <div class="hint">Build Linux-first tools with real-world polish</div>
-          <div><span class="prompt">$</span> status</div>
-          <div class="hint">Open source. Shipping often.</div>
-        </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer class="footer container">
-    <p>Open to meaningful collaboration and high-quality OSS work.</p>
-  </footer>
+      <section class="section reveal" data-reveal>
+        <div class="section-header">
+          <h2>Toolchain</h2>
+          <p>Everything used to ship Linux-first tools with polish and long-term maintainability.</p>
+        </div>
+        <div class="split">
+          <div class="card">
+            <div class="list">
+              <span><strong>Languages:</strong> Python, JavaScript, Shell</span>
+              <span><strong>UI:</strong> CustomTkinter, Electron, Qt</span>
+              <span><strong>Packaging:</strong> DEB, AppImage, PyInstaller</span>
+              <span><strong>Sync Engine:</strong> rclone</span>
+            </div>
+          </div>
+          <div class="terminal">
+            <div><span class="prompt">$</span> whoami</div>
+            <div class="hint">cryptd777</div>
+            <div><span class="prompt">$</span> mission</div>
+            <div class="hint">Build Linux-first tools with real-world polish</div>
+            <div><span class="prompt">$</span> status</div>
+            <div class="hint">Open source. Shipping often.</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <p>Open to meaningful collaboration and high-quality OSS work.</p>
+    </footer>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

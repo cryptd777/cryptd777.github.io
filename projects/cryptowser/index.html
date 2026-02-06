@@ -10,93 +10,91 @@
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css" />
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="../../index.html">
-        <span class="brand-mark">c7</span>
-        <span>cryptd777</span>
-      </a>
-      <nav class="nav-links">
+  <div id="wrapper">
+    <header id="header" class="small">
+      <div class="logo">c7</div>
+      <h1>Cryptowser</h1>
+      <p>Privacy-focused Electron browser built to stay fast on low-resource Linux systems.</p>
+      <div class="badge-row center">
+        <span class="badge">Production-ready</span>
+      </div>
+    </header>
+
+    <nav id="nav">
+      <div class="inner">
         <a href="../../index.html">Home</a>
         <a href="../../about.html">About</a>
         <a href="../../projects.html">Projects</a>
         <a href="../../contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="page-hero container">
-      <p class="kicker">Running</p>
-      <h1>Cryptowser</h1>
-      <p>Privacy-focused Electron browser built to stay fast on low-resource Linux systems.</p>
-      <div class="meta-row">
-        <span class="badge">Production-ready</span>
       </div>
-    </section>
+    </nav>
 
-    <section class="section container reveal" data-reveal>
-      <div class="split">
-        <div class="card">
-          <div class="card-topline"></div>
-          <h3>Snapshot</h3>
-          <div class="list">
-            <span><strong>Platform:</strong> Linux (AMD64, ARM64)</span>
-            <span><strong>Stack:</strong> Electron</span>
-            <span><strong>Focus:</strong> Privacy, speed, lightweight UI</span>
-            <span><strong>Packages:</strong> AppImage, DEB</span>
+    <main id="main" class="inner">
+      <section class="section reveal" data-reveal>
+        <div class="section-header">
+          <h2>Snapshot</h2>
+          <p>Key details and targets for the current release.</p>
+        </div>
+        <div class="split">
+          <div class="card">
+            <div class="list">
+              <span><strong>Platform:</strong> Linux (AMD64, ARM64)</span>
+              <span><strong>Stack:</strong> Electron</span>
+              <span><strong>Focus:</strong> Privacy, speed, lightweight UI</span>
+              <span><strong>Packages:</strong> AppImage, DEB</span>
+            </div>
+          </div>
+          <div class="terminal">
+            <div><span class="prompt">$</span> release</div>
+            <div class="hint">v1.0.1</div>
+            <div><span class="prompt">$</span> packages</div>
+            <div class="hint">AppImage, DEB</div>
+            <div><span class="prompt">$</span> repo</div>
+            <div class="hint">github.com/cryptd777/cryptowser</div>
           </div>
         </div>
-        <div class="terminal">
-          <div><span class="prompt">$</span> release</div>
-          <div class="hint">v1.0.1</div>
-          <div><span class="prompt">$</span> packages</div>
-          <div class="hint">AppImage, DEB</div>
-          <div><span class="prompt">$</span> repo</div>
-          <div class="hint">github.com/cryptd777/cryptowser</div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section container reveal" data-reveal>
-      <h2 class="section-title">Core features</h2>
-      <p class="section-subtitle">Built for speed and privacy without heavy resource usage.</p>
-      <div class="card-grid">
-        <div class="card">
-          <div class="card-topline"></div>
-          <h3>Ultra low footprint</h3>
-          <p>Runs smoothly on machines with 1GB RAM.</p>
+      <section class="section reveal" data-reveal>
+        <div class="section-header">
+          <h2>Core features</h2>
+          <p>Built for speed and privacy without heavy resource usage.</p>
         </div>
-        <div class="card">
-          <div class="card-topline"></div>
-          <h3>Privacy first</h3>
-          <p>Built-in ad and tracker blocking with privacy-focused defaults.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Ultra low footprint</h3>
+            <p>Runs smoothly on machines with 1GB RAM.</p>
+          </div>
+          <div class="card">
+            <h3>Privacy first</h3>
+            <p>Built-in ad and tracker blocking with privacy-focused defaults.</p>
+          </div>
+          <div class="card">
+            <h3>ARM64 ready</h3>
+            <p>Supports Raspberry Pi and lightweight desktops.</p>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-topline"></div>
-          <h3>ARM64 ready</h3>
-          <p>Supports Raspberry Pi and lightweight desktops.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section container reveal" data-reveal>
-      <div class="card">
-        <div class="card-topline"></div>
-        <h3>Repository</h3>
-        <p>Download the latest release on GitHub.</p>
-        <p><a class="inline-link" href="https://github.com/cryptd777/cryptowser">github.com/cryptd777/cryptowser</a></p>
-      </div>
-    </section>
-  </main>
+      <section class="section reveal" data-reveal>
+        <div class="section-header">
+          <h2>Repository</h2>
+          <p>Download the latest release on GitHub.</p>
+        </div>
+        <div class="card">
+          <a class="inline-link" href="https://github.com/cryptd777/cryptowser">github.com/cryptd777/cryptowser</a>
+        </div>
+      </section>
+    </main>
 
-  <footer class="footer container">
-    <p>Back to <a class="inline-link" href="../../projects.html">Projects</a></p>
-  </footer>
+    <footer id="footer">
+      <p>Back to <a class="inline-link" href="../../projects.html">Projects</a></p>
+    </footer>
+  </div>
 
   <script src="../../js/main.js"></script>
 </body>
