@@ -7,9 +7,8 @@
   <meta name="description" content="Linux developer portfolio showcasing open-source Linux tools, builds, and releases." />
   <meta name="author" content="cryptd777" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0d1117" />
+  <meta name="theme-color" content="#F7F8FB" />
   <link rel="canonical" href="https://cryptd777.github.io/" />
-  <link rel="amphtml" href="https://cryptd777.github.io/amp/index.html" />
   <link rel="amphtml" href="https://cryptd777.github.io/amp/index.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="cryptd777" />
@@ -40,161 +39,231 @@
     }
   </script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/tailwind.css" />
-  <link rel="stylesheet" href="styles.css" />
-  <script src="assets/lucide.min.js"></script>
-</head>
-<body class="bg-[#0d1117] text-slate-100 antialiased">
-  <div class="min-h-screen">
-    <nav class="nav-shell sticky top-0 z-30 border-b border-white/5 bg-[#0d1117]/80 backdrop-blur">
-      <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4">
-        <div class="flex items-center gap-3">
-          <div class="h-10 w-10 rounded-lg bg-[#161b22]/80 border border-white/10 grid place-items-center shadow-lg shadow-emerald-500/10">
-            <i data-lucide="terminal" class="h-5 w-5 text-[#2ea043]"></i>
-          </div>
-          <div>
-            <p class="text-sm uppercase tracking-[0.4em] text-slate-400">cryptd777</p>
-            <p class="text-xs text-slate-500">Linux-first builder</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-3">
-          <div class="hidden items-center gap-2 text-sm text-slate-400 md:flex">
-            <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link" href="projects.html">Projects</a>
-            <a class="nav-link" href="about.html">About</a>
-            <a class="nav-link" href="contact.html">Contact</a>
-            <a class="nav-link" href="https://github.com/cryptd777">GitHub</a>
-          </div>
-          <button class="nav-toggle md:hidden" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
-            <i data-lucide="menu" class="h-5 w-5"></i>
-          </button>
-        </div>
-      </div>
-      <div id="mobile-nav" data-nav-menu class="hidden border-t border-white/5 bg-[#0d1117]/95 px-5 py-4 md:hidden">
-        <div class="flex flex-col gap-3 text-sm text-slate-300">
-          <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link" href="projects.html">Projects</a>
-          <a class="nav-link" href="about.html">About</a>
-          <a class="nav-link" href="contact.html">Contact</a>
-          <a class="nav-link" href="https://github.com/cryptd777">GitHub</a>
-        </div>
-      </div>
-    </nav>
+  <style>
 
-    <main class="mx-auto flex w-full max-w-6xl flex-col gap-10 px-5 py-10">
-      <section class="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-        <div class="bento-card bento-card--hero">
-          <div class="flex flex-wrap items-center gap-3">
-            <span class="tag">Linux Enthusiast</span>
-            <span class="tag tag--alt">Open Source</span>
-          </div>
-          <h1 class="mt-5 text-3xl font-semibold leading-tight text-white sm:text-4xl">
-            Linux-first developer shipping open-source Linux tools with release-grade polish.
-          </h1>
-          <p class="mt-4 text-base text-slate-300">
-            Linux developer portfolio for cryptd777: open-source Linux projects, Linux desktop tools, and reliable Linux release pipelines.
-          </p>
-          <div class="mt-6 rounded-xl border border-white/10 bg-black/40 px-4 py-3 font-mono text-sm text-slate-200 shadow-inner">
-            <span class="text-[#2ea043]">$</span>
-            <span id="typing"></span>
-            <span class="cursor">█</span>
-          </div>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a class="btn-primary" href="projects.html">View projects</a>
-            <a class="btn-secondary" href="https://github.com/cryptd777">GitHub profile</a>
+:root {
+  --bg: #F7F8FB;
+  --bg-alt: #EEF2F7;
+  --card: #FFFFFF;
+  --text: #0F172A;
+  --muted: #64748B;
+  --primary: #2563EB;
+  --accent: #10B981;
+  --border: #E2E8F0;
+  --shadow: 0 10px 24px -18px rgba(15, 23, 42, 0.35);
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Inter", "Roboto", system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.page { min-height: 100vh; display: flex; flex-direction: column; }
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(249, 250, 251, 0.95);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.brand-meta span:first-child {
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+}
+
+.brand-meta span:last-child {
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: block;
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.nav-links a {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #FFFFFF;
+}
+
+.nav-links a.active {
+  background: linear-gradient(135deg, #3B82F6, #2563EB);
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 10px 20px -16px rgba(37, 99, 235, 0.7);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.grid { display: grid; gap: 20px; }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+h1, h2, h3 { margin: 0; line-height: 1.2; }
+p { margin: 0; color: var(--muted); }
+
+.eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.badge-group { display: flex; flex-wrap: wrap; gap: 8px; }
+.badge {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #F1F5F9;
+  border: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: #475569;
+}
+
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.btn {
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #FFFFFF;
+  color: var(--text);
+  font-weight: 600;
+}
+.btn.primary {
+  background: linear-gradient(135deg, #3B82F6, #2563EB);
+  color: #FFFFFF;
+  border-color: transparent;
+}
+
+.list { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; color: var(--muted); }
+
+footer {
+  margin-top: auto;
+  padding: 24px 20px 32px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  background: #FFFFFF;
+}
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="nav">
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="brand-icon">C7</div>
+          <div class="brand-meta">
+            <span>cryptd777</span>
+            <span>Linux-first builder</span>
           </div>
         </div>
-        <div class="bento-card bento-card--status">
-          <div class="flex items-center gap-2 text-sm text-slate-400">
-            <i data-lucide="activity" class="h-4 w-4 text-[#58a6ff]"></i>
-            Live status
-          </div>
-          <div class="mt-4 space-y-4">
-            <div class="flex items-center justify-between rounded-lg border border-white/5 bg-[#0d1117]/70 px-4 py-3">
-              <div>
-                <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Release Mode</p>
-                <p class="text-sm text-white">Stable builds active</p>
-              </div>
-              <span class="pill">Online</span>
-            </div>
-            <div class="flex items-center justify-between rounded-lg border border-white/5 bg-[#0d1117]/70 px-4 py-3">
-              <div>
-                <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Focus</p>
-                <p class="text-sm text-white">Desktop tooling</p>
-              </div>
-              <span class="pill pill--blue">Linux</span>
-            </div>
-            <div class="rounded-lg border border-white/5 bg-[#0d1117]/70 px-4 py-3">
-              <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Next up</p>
-              <p class="text-sm text-white">Package pipeline refinements</p>
-            </div>
-          </div>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html" class="active">Home</a>
+          <a href="projects.html" class="">Projects</a>
+          <a href="about.html" class="">About</a>
+          <a href="contact.html" class="">Contact</a>
+          <a href="https://github.com/cryptd777">GitHub</a>
+        </nav>
+
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <span class="eyebrow">Signature focus</span>
+        <h1>Lightweight Linux UX with release-grade delivery.</h1>
+        <p>Designing open-source Linux tools that feel fast, stable, and respectful of hardware.</p>
+        <div class="btn-row">
+          <a class="btn primary" href="projects.html">View projects</a>
+          <a class="btn" href="contact.html">Start a project</a>
         </div>
       </section>
 
-      <section id="projects" class="grid gap-6 md:grid-cols-2">
-        <div class="bento-card">
-          <div class="flex items-center justify-between">
-            <h2 class="text-xl font-semibold text-white">Projects</h2>
-            <i data-lucide="rocket" class="h-5 w-5 text-[#2ea043]"></i>
-          </div>
-          <p class="mt-2 text-sm text-slate-400">Linux-native projects and open-source Linux apps with clean UX and reliable releases.</p>
-        </div>
-        <div class="bento-card">
-          <div class="flex items-center gap-2 text-sm text-slate-400">
-            <i data-lucide="shield-check" class="h-4 w-4 text-[#58a6ff]"></i>
-            Release focus
-          </div>
-          <ul class="mt-4 space-y-2 text-sm text-slate-300">
+      <section class="grid grid-2">
+        <article class="card">
+          <span class="eyebrow">Highlights</span>
+          <h2>Linux-first releases that stay stable in production.</h2>
+          <ul class="list">
             <li>AppImage + DEB pipelines</li>
             <li>Fast startup on low-resource devices</li>
             <li>Privacy-first defaults</li>
           </ul>
-        </div>
-        <article class="bento-card bento-card--project">
-          <div class="flex items-center justify-between">
-            <h3 class="text-lg font-semibold text-white">Cryptowser</h3>
-            <span class="pill">Browser</span>
-          </div>
-          <p class="mt-3 text-sm text-slate-300">Privacy-focused Electron browser optimized for lightweight Linux systems.</p>
-          <p class="mt-2 text-xs text-slate-500">Ships AppImage + DEB, tuned for low-RAM desktops.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="chip">Electron</span>
-            <span class="chip">Bash</span>
-            <span class="chip">Linux</span>
-          </div>
-          <a class="btn-link" href="projects/cryptowser/index.html">
-            View project
-            <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
-          </a>
         </article>
-        <article class="bento-card bento-card--project">
-          <div class="flex items-center justify-between">
-            <h3 class="text-lg font-semibold text-white">LinuxCloudSync</h3>
-            <span class="pill pill--blue">Sync</span>
-          </div>
-          <p class="mt-3 text-sm text-slate-300">Professional sync client with profiles, three modes, and recovery tooling.</p>
-          <p class="mt-2 text-xs text-slate-500">Safe defaults, recoverable baselines, and clean logs.</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="chip">Python</span>
-            <span class="chip">rclone</span>
-            <span class="chip">Linux</span>
-          </div>
-          <a class="btn-link" href="projects/linuxcloudsync/index.html">
-            View project
-            <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
-          </a>
-        </article>
-      </section>
-
-      <section id="stack" class="grid gap-6 lg:grid-cols-[1fr_1.2fr]">
-        <div class="bento-card">
-          <div class="flex items-center justify-between">
-            <h2 class="text-xl font-semibold text-white">Tech Stack</h2>
-            <i data-lucide="cpu" class="h-5 w-5 text-[#58a6ff]"></i>
-          </div>
-          <p class="mt-2 text-sm text-slate-400">Daily drivers and Linux release tooling.</p>
-          <div class="mt-6 flex flex-wrap gap-3">
+        <article class="card">
+          <span class="eyebrow">Tech stack</span>
+          <div class="badge-group">
             <span class="badge">Vim</span>
             <span class="badge">Docker</span>
             <span class="badge">Arch Linux</span>
@@ -202,102 +271,40 @@
             <span class="badge">CMake</span>
             <span class="badge">Git</span>
           </div>
-        </div>
-        <div class="bento-card bento-card--marquee">
-          <div class="marquee">
-            <div class="marquee__track">
-              <span>Vim</span>
-              <span>Docker</span>
-              <span>Arch Linux</span>
-              <span>GCC</span>
-              <span>Systemd</span>
-              <span>Wayland</span>
-              <span>Rust</span>
-              <span>Vim</span>
-              <span>Docker</span>
-              <span>Arch Linux</span>
-              <span>GCC</span>
-              <span>Systemd</span>
-              <span>Wayland</span>
-              <span>Rust</span>
-            </div>
-          </div>
-          <p class="mt-4 text-sm text-slate-400">A flowing stack ribbon for quick scanning.</p>
-        </div>
+        </article>
       </section>
 
-      <section id="activity" class="grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
-        <div class="bento-card">
-          <div class="flex items-center justify-between">
-            <h2 class="text-xl font-semibold text-white">Activity Widget</h2>
-            <i data-lucide="terminal" class="h-5 w-5 text-[#2ea043]"></i>
+      <section class="grid grid-2">
+        <article class="card">
+          <div class="badge-group">
+            <span class="badge">Browser</span>
+            <span class="badge">Electron</span>
+            <span class="badge">Linux</span>
           </div>
-          <div class="mt-4 space-y-3 rounded-xl border border-white/10 bg-black/40 px-4 py-4 font-mono text-sm text-slate-300">
-            <p><span class="text-[#2ea043]">$</span> tail -f /var/log/build.log</p>
-            <p class="text-slate-500">[INFO] release pipeline queued</p>
-            <p class="text-slate-500">[OK] checksum verification complete</p>
-            <p class="text-slate-500">[SYNC] mirrors updated</p>
-            <p class="text-slate-500">[NOTE] deploy window: Friday 18:00 UTC</p>
+          <h3>Cryptowser</h3>
+          <p>Privacy-focused Linux browser optimized for lightweight systems.</p>
+          <div class="btn-row">
+            <a class="btn" href="projects/cryptowser/index.html">View project</a>
           </div>
-        </div>
-        <div class="bento-card bento-card--compact">
-          <div class="flex items-center gap-2 text-sm text-slate-400">
-            <i data-lucide="github" class="h-4 w-4 text-[#58a6ff]"></i>
-            Live GitHub Stats
+        </article>
+        <article class="card">
+          <div class="badge-group">
+            <span class="badge">Sync</span>
+            <span class="badge">Python</span>
+            <span class="badge">rclone</span>
           </div>
-          <p class="mt-3 text-sm text-slate-300">Real-time view of public Linux project activity.</p>
-          <div class="mt-4 grid gap-3">
-            <div class="rounded-lg border border-white/10 bg-[#0d1117]/60 px-4 py-3">
-              <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Public repos</p>
-              <p class="mt-1 text-sm text-white">Linux-first tools & apps</p>
-            </div>
-            <div class="rounded-lg border border-white/10 bg-[#0d1117]/60 px-4 py-3">
-              <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Top languages</p>
-              <p class="mt-1 text-sm text-white">Rust · Python · Bash</p>
-            </div>
-            <div class="rounded-lg border border-white/10 bg-[#0d1117]/60 px-4 py-3">
-              <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Current focus</p>
-              <p class="mt-1 text-sm text-white">Release automation + DX</p>
-            </div>
+          <h3>LinuxCloudSync</h3>
+          <p>Professional sync client with profiles, three modes, and recovery tooling.</p>
+          <div class="btn-row">
+            <a class="btn" href="projects/linuxcloudsync/index.html">View project</a>
           </div>
-          <div class="mt-4 flex flex-wrap gap-2 text-xs text-slate-400">
-            <span>Also on</span>
-            <a class="text-[#58a6ff]" href="https://github.com/cryptd7777">github.com/cryptd7777</a>
-          </div>
-        </div>
+        </article>
       </section>
     </main>
 
-    <footer class="border-t border-white/5 py-8 text-center text-xs text-slate-500">
+    <footer>
       © 2026 cryptd777. Built for the Linux community.
     </footer>
   </div>
-
-  <script>
-    const text = "neofetch --distro arch --kernel 6.x --status stable";
-    const typingEl = document.getElementById("typing");
-    let idx = 0;
-
-    const type = () => {
-      typingEl.textContent = text.slice(0, idx);
-      idx = (idx + 1) % (text.length + 1);
-      setTimeout(type, 70);
-    };
-
-    type();
-
-    const navToggle = document.querySelector("[data-nav-toggle]");
-    const navMenu = document.querySelector("[data-nav-menu]");
-
-    if (navToggle && navMenu) {
-      navToggle.addEventListener("click", () => {
-        const isOpen = navToggle.getAttribute("aria-expanded") === "true";
-        navToggle.setAttribute("aria-expanded", String(!isOpen));
-        navMenu.classList.toggle("hidden", isOpen);
-      });
-    }
-
-    lucide.createIcons();
-  </script>
 </body>
 </html>
