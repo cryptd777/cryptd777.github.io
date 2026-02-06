@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | cryptd777</title>
+  <meta name="description" content="About cryptd777: Linux-first builder of open-source desktop tools." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@0.451.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="bg-[#0d1117] text-slate-100 antialiased">
+  <div class="min-h-screen">
+    <nav class="nav-shell sticky top-0 z-30 border-b border-white/5 bg-[#0d1117]/80 backdrop-blur">
+      <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4">
+        <div class="flex items-center gap-3">
+          <div class="h-10 w-10 rounded-lg bg-[#161b22]/80 border border-white/10 grid place-items-center shadow-lg shadow-emerald-500/10">
+            <i data-lucide="terminal" class="h-5 w-5 text-[#2ea043]"></i>
+          </div>
+          <div>
+            <p class="text-sm uppercase tracking-[0.4em] text-slate-400">cryptd777</p>
+            <p class="text-xs text-slate-500">Linux-first builder</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden items-center gap-2 text-sm text-slate-400 md:flex">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="projects.html">Projects</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="https://github.com/cryptd777">GitHub</a>
+          </div>
+          <button class="nav-toggle md:hidden" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
+            <i data-lucide="menu" class="h-5 w-5"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-nav" data-nav-menu class="hidden border-t border-white/5 bg-[#0d1117]/95 px-5 py-4 md:hidden">
+        <div class="flex flex-col gap-3 text-sm text-slate-300">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="projects.html">Projects</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="https://github.com/cryptd777">GitHub</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="mx-auto flex w-full max-w-6xl flex-col gap-10 px-5 py-10">
+      <header class="bento-card">
+        <div class="flex items-center gap-2 text-sm text-slate-400">
+          <i data-lucide="user" class="h-4 w-4 text-[#58a6ff]"></i>
+          About
+        </div>
+        <h1 class="mt-4 text-3xl font-semibold text-white">Linux-first builder focused on privacy, speed, and release discipline.</h1>
+        <p class="mt-3 text-sm text-slate-300">I design open-source desktop tools and packaging workflows that feel stable on real Linux hardware.</p>
+      </header>
+
+      <section class="grid gap-6 md:grid-cols-2">
+        <div class="bento-card">
+          <h2 class="text-xl font-semibold text-white">Core principles</h2>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300">
+            <li>Respect the hardware: fast startup and low memory.</li>
+            <li>Privacy by default: minimal tracking, clear data boundaries.</li>
+            <li>Release polish: versioned builds, checksums, and rollback paths.</li>
+          </ul>
+        </div>
+        <div class="bento-card">
+          <div class="flex items-center gap-2 text-sm text-slate-400">
+            <i data-lucide="cpu" class="h-4 w-4 text-[#2ea043]"></i>
+            Tooling
+          </div>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <span class="badge">Python</span>
+            <span class="badge">Electron</span>
+            <span class="badge">rclone</span>
+            <span class="badge">AppImage</span>
+            <span class="badge">DEB</span>
+            <span class="badge">GitHub Actions</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid gap-6 md:grid-cols-3">
+        <div class="bento-card">
+          <h3 class="text-lg font-semibold text-white">Desktop UX</h3>
+          <p class="mt-2 text-sm text-slate-300">Keyboard-forward experiences that feel immediate.</p>
+        </div>
+        <div class="bento-card">
+          <h3 class="text-lg font-semibold text-white">Release pipeline</h3>
+          <p class="mt-2 text-sm text-slate-300">Automated builds with checksum validation and clean install steps.</p>
+        </div>
+        <div class="bento-card">
+          <h3 class="text-lg font-semibold text-white">Documentation</h3>
+          <p class="mt-2 text-sm text-slate-300">Clear onboarding for first-time Linux users.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/5 py-8 text-center text-xs text-slate-500">
+      © 2026 cryptd777. Built for the Linux community.
+    </footer>
+  </div>
+
+  <script>
+    const navToggle = document.querySelector("[data-nav-toggle]");
+    const navMenu = document.querySelector("[data-nav-menu]");
+
+    if (navToggle && navMenu) {
+      navToggle.addEventListener("click", () => {
+        const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", String(!isOpen));
+        navMenu.classList.toggle("hidden", isOpen);
+      });
+    }
+
+    lucide.createIcons();
+  </script>
+</body>
+</html>

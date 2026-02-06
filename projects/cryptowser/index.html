@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cryptowser | cryptd777</title>
+  <meta name="description" content="Cryptowser is a privacy-focused Electron browser optimized for lightweight Linux systems." />
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../styles.css" />
+  <script src="https://unpkg.com/lucide@0.451.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="bg-[#0d1117] text-slate-100 antialiased">
+  <div class="min-h-screen">
+    <nav class="nav-shell sticky top-0 z-30 border-b border-white/5 bg-[#0d1117]/80 backdrop-blur">
+      <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4">
+        <div class="flex items-center gap-3">
+          <div class="h-10 w-10 rounded-lg bg-[#161b22]/80 border border-white/10 grid place-items-center shadow-lg shadow-emerald-500/10">
+            <i data-lucide="terminal" class="h-5 w-5 text-[#2ea043]"></i>
+          </div>
+          <div>
+            <p class="text-sm uppercase tracking-[0.4em] text-slate-400">cryptd777</p>
+            <p class="text-xs text-slate-500">Linux-first builder</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden items-center gap-2 text-sm text-slate-400 md:flex">
+            <a class="nav-link" href="../../index.html">Home</a>
+            <a class="nav-link" href="../../projects.html">Projects</a>
+            <a class="nav-link" href="../../about.html">About</a>
+            <a class="nav-link" href="../../contact.html">Contact</a>
+            <a class="nav-link" href="https://github.com/cryptd777/cryptowser">GitHub</a>
+          </div>
+          <button class="nav-toggle md:hidden" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
+            <i data-lucide="menu" class="h-5 w-5"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-nav" data-nav-menu class="hidden border-t border-white/5 bg-[#0d1117]/95 px-5 py-4 md:hidden">
+        <div class="flex flex-col gap-3 text-sm text-slate-300">
+          <a class="nav-link" href="../../index.html">Home</a>
+          <a class="nav-link" href="../../projects.html">Projects</a>
+          <a class="nav-link" href="../../about.html">About</a>
+          <a class="nav-link" href="../../contact.html">Contact</a>
+          <a class="nav-link" href="https://github.com/cryptd777/cryptowser">GitHub</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="mx-auto flex w-full max-w-6xl flex-col gap-10 px-5 py-10">
+      <header class="bento-card">
+        <div class="flex items-center gap-2 text-sm text-slate-400">
+          <i data-lucide="globe" class="h-4 w-4 text-[#58a6ff]"></i>
+          Browser project
+        </div>
+        <h1 class="mt-4 text-3xl font-semibold text-white">Cryptowser</h1>
+        <p class="mt-3 text-sm text-slate-300">Privacy-focused Electron browser optimized for lightweight Linux systems.</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="pill">AppImage</span>
+          <span class="pill pill--blue">DEB</span>
+          <span class="pill">Linux</span>
+        </div>
+      </header>
+
+      <section class="grid gap-6 md:grid-cols-2">
+        <div class="bento-card">
+          <h2 class="text-xl font-semibold text-white">Snapshot</h2>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300">
+            <li><strong>Platform:</strong> Linux (AMD64, ARM64)</li>
+            <li><strong>Stack:</strong> Electron, Chromium</li>
+            <li><strong>Focus:</strong> Privacy, speed, lightweight UI</li>
+            <li><strong>Packages:</strong> AppImage, DEB</li>
+          </ul>
+        </div>
+        <div class="bento-card">
+          <div class="flex items-center gap-2 text-sm text-slate-400">
+            <i data-lucide="terminal" class="h-4 w-4 text-[#2ea043]"></i>
+            Terminal log
+          </div>
+          <div class="mt-4 space-y-2 rounded-xl border border-white/10 bg-black/40 px-4 py-4 font-mono text-sm text-slate-300">
+            <p><span class="text-[#2ea043]">$</span> cryptowser --version</p>
+            <p class="text-slate-500">v1.x stable channel</p>
+            <p><span class="text-[#2ea043]">$</span> cryptowser --profile minimal</p>
+            <p class="text-slate-500">launch time: &lt; 2s on low-end hardware</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid gap-6 md:grid-cols-3">
+        <div class="bento-card">
+          <h3 class="text-lg font-semibold text-white">Privacy first</h3>
+          <p class="mt-2 text-sm text-slate-300">Built-in tracker blocking and minimal telemetry defaults.</p>
+        </div>
+        <div class="bento-card">
+          <h3 class="text-lg font-semibold text-white">Low footprint</h3>
+          <p class="mt-2 text-sm text-slate-300">Optimized for machines with modest RAM.</p>
+        </div>
+        <div class="bento-card">
+          <h3 class="text-lg font-semibold text-white">Keyboard-driven</h3>
+          <p class="mt-2 text-sm text-slate-300">Fast tab switching and focused command palette flow.</p>
+        </div>
+      </section>
+
+      <section class="bento-card">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold text-white">Repository</h2>
+          <i data-lucide="github" class="h-5 w-5 text-[#58a6ff]"></i>
+        </div>
+        <p class="mt-3 text-sm text-slate-300">Source code and releases live on GitHub.</p>
+        <a class="btn-link" href="https://github.com/cryptd777/cryptowser">
+          github.com/cryptd777/cryptowser
+          <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+        </a>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/5 py-8 text-center text-xs text-slate-500">
+      © 2026 cryptd777. Built for the Linux community.
+    </footer>
+  </div>
+
+  <script>
+    const navToggle = document.querySelector("[data-nav-toggle]");
+    const navMenu = document.querySelector("[data-nav-menu]");
+
+    if (navToggle && navMenu) {
+      navToggle.addEventListener("click", () => {
+        const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", String(!isOpen));
+        navMenu.classList.toggle("hidden", isOpen);
+      });
+    }
+
+    lucide.createIcons();
+  </script>
+</body>
+</html>
