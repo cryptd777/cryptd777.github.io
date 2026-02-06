@@ -69,6 +69,12 @@ button:focus-visible {
   padding: 96px 0 70px;
 }
 
+#header .inner {
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+}
+
 #header.small {
   padding: 70px 0 40px;
 }
