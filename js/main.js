@@ -1,7 +1,7 @@
 const path = location.pathname;
 const current = path.split("/").filter(Boolean).pop() || "index.html";
 
-const navLinks = document.querySelectorAll("#nav a");
+const navLinks = document.querySelectorAll(".nav-links a");
 navLinks.forEach((link) => {
   const href = link.getAttribute("href");
   if (!href) return;
