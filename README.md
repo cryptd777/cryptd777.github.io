@@ -1,25 +1,42 @@
 # cryptd777.github.io
 
-Personal site for cryptd777. A Linux-first portfolio showcasing open-source tools, builds, and releases.
+Light‑mode, card‑based portfolio site for cryptd777 with AMP equivalents.
 
-## What’s Inside
-- Home, About, Projects, Contact pages
-- Project pages for Cryptowser and LinuxCloudSync
-- Lightweight, static HTML/CSS/JS
-- Linux-inspired design system
+## Pages
 
-## Structure
-- `index.html` — Homepage
-- `about.html` — Philosophy and toolchain
-- `projects.html` — Project overview
-- `contact.html` — Contact and collaboration
-- `projects/cryptowser/index.html` — Cryptowser page
-- `projects/linuxcloudsync/index.html` — LinuxCloudSync page
-- `css/style.css` — Styles
-- `js/main.js` — Nav highlight, year, reveal animation
+- `index.html`
+- `projects.html`
+- `about.html`
+- `contact.html`
+- `projects/cryptowser/index.html`
+- `projects/linuxcloudsync/index.html`
 
-## Deploy
-GitHub Pages from `main` / root.
+AMP versions live under `amp/` with matching paths.
 
-## License
-All rights reserved unless otherwise stated.
+## Design System
+
+- Light mode only
+- Card‑based layout
+- Semantic HTML5
+- Self‑contained CSS in each HTML file
+- No external CSS frameworks or JS libraries
+
+## Local Preview
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open:
+
+- `http://localhost:8000/index.html`
+- `http://localhost:8000/amp/index.html`
+
+If you hit caching issues, add a cache buster:
+
+- `http://localhost:8000/index.html?v=1`
+
+## Notes
+
+- AMP pages use a stricter CSS subset and avoid unsupported effects.
+- `skills/` is ignored via `.gitignore` and is not intended for publishing.
