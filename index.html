@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>cryptd777 | Terminal-first builder</title>
-  <meta name="description" content="cryptd777 builds Linux-first open-source tools with release-grade polish and terminal-native workflows." />
+  <meta name="description" content="cryptd777 builds Linux-first open-source tools with release-grade polish." />
   <meta property="og:title" content="cryptd777 | Terminal-first builder" />
-  <meta property="og:description" content="Linux-first tools with terminal-native workflows, reliable releases, and fast UX." />
+  <meta property="og:description" content="Linux-first tools with terminal-native workflows and reliable releases." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og.svg" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -36,16 +36,11 @@
       <div class="container hero-grid">
         <div>
           <div class="eyebrow">terminal-first builder</div>
-          <h1>Linux-first products with a live console heartbeat.</h1>
-          <p>I build open-source desktop tools and release pipelines that feel fast, stable, and native on real Linux hardware.</p>
+          <h1>Linux-first products with a calm console feel.</h1>
+          <p>I build open-source desktop tools and release pipelines that are fast, stable, and Linux-native.</p>
           <div class="cta-row">
             <a class="btn" href="projects.html">View projects</a>
             <a class="btn secondary" href="https://github.com/cryptd777">GitHub profile</a>
-          </div>
-          <div class="stat-row">
-            <div class="stat-chip">status: <strong>online</strong></div>
-            <div class="stat-chip">clock: <strong data-live="clock">00:00:00</strong></div>
-            <div class="stat-chip">uptime: <strong data-live="uptime">0d 00h 00m 00s</strong></div>
           </div>
         </div>
         <div class="shell">
@@ -55,19 +50,14 @@
               <span class="shell-dot yellow"></span>
               <span class="shell-dot green"></span>
             </div>
-            <div class="shell-title">/home/cryptd777/system</div>
-            <div class="shell-status" data-live="clock">00:00:00</div>
+            <div class="shell-title">/home/cryptd777</div>
+            <div class="shell-status">ready</div>
           </div>
           <div class="shell-body">
-            <div class="terminal-line"><span class="prompt">cryptd777@linux</span><span class="command">:~$</span><span data-type="boot --profile release --ui minimal" data-type-speed="32"></span><span class="cursor"></span></div>
-            <div class="terminal-line"><span class="hint">Loading workspace modules: build, sync, release, docs</span></div>
-            <div class="terminal-line"><span class="prompt">cryptd777@linux</span><span class="command">:~$</span><span data-type="tail -f ./logs/shipping.log" data-type-speed="24" data-type-delay="800"></span></div>
-            <div class="log-stream">
-              <div class="log-line"><strong>[OK]</strong> release::pipeline activated</div>
-              <div class="log-line"><strong>[INFO]</strong> packaging: AppImage + DEB queued</div>
-              <div class="log-line"><strong>[SYNC]</strong> rclone profiles validated</div>
-              <div class="log-line"><strong>[DOCS]</strong> onboarding guide refreshed</div>
-            </div>
+            <div class="terminal-line"><span class="prompt">$</span><span class="command"> status</span></div>
+            <div class="terminal-line"><span class="hint">Linux-first tools • release-ready workflows</span></div>
+            <div class="terminal-line"><span class="prompt">$</span><span class="command"> focus</span></div>
+            <div class="terminal-line"><span class="hint">privacy, speed, low-resource UX</span></div>
           </div>
         </div>
       </div>
@@ -77,7 +67,7 @@
       <section class="section reveal" data-reveal>
         <div class="section-header">
           <h2>Featured projects</h2>
-          <p>Shipping tools with real installs, repeatable builds, and docs that respect your time.</p>
+          <p>Small, focused tools with reliable Linux releases.</p>
         </div>
         <div class="grid">
           <article class="panel">
@@ -89,13 +79,13 @@
           <article class="panel">
             <div class="meta">Python • rclone</div>
             <h3>LinuxCloudSync</h3>
-            <p>Professional sync client with profiles, three modes, and one-click recovery.</p>
+            <p>Professional sync client with profiles and recovery tools.</p>
             <p><a class="inline-link" href="projects/linuxcloudsync/index.html">View project</a></p>
           </article>
           <article class="panel">
             <div class="meta">Open-source</div>
             <h3>Release pipeline</h3>
-            <p>Linux-first packaging, versioned releases, and tested upgrade paths.</p>
+            <p>Linux-first packaging with tested upgrade paths.</p>
             <p><a class="inline-link" href="projects.html">See all projects</a></p>
           </article>
         </div>
@@ -103,83 +93,21 @@
 
       <section class="section reveal" data-reveal>
         <div class="section-header">
-          <h2>Operational stack</h2>
-          <p>Everything is tuned for reliable delivery on modest Linux hardware.</p>
+          <h2>Focus</h2>
+          <p>Clean UI, predictable installs, and smooth workflows.</p>
         </div>
         <div class="split">
           <div class="panel">
-            <h3>Design goals</h3>
-            <p>Fast startup, offline-friendly flows, and keyboard-first UX with clear exit paths.</p>
+            <h3>Performance</h3>
+            <p>Fast startup, low memory footprint, and stable releases.</p>
           </div>
           <div class="panel">
-            <h3>Tooling</h3>
-            <p>Python, Electron, rclone, and release automation scripts with checksum validation.</p>
+            <h3>Privacy</h3>
+            <p>Minimal tracking, clear data boundaries, and safe defaults.</p>
           </div>
           <div class="panel">
-            <h3>Distribution</h3>
-            <p>AppImage + DEB releases with versioned changelogs and rollback-safe upgrades.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section reveal" data-reveal>
-        <div class="section-header">
-          <h2>Live system metrics</h2>
-          <p>A quick glance at build health and workstation load.</p>
-        </div>
-        <div class="grid">
-          <div class="panel">
-            <h3>CPU load</h3>
-            <p><span class="inline-code" data-live-value="cpu">18%</span> average build load.</p>
-          </div>
-          <div class="panel">
-            <h3>Memory</h3>
-            <p><span class="inline-code" data-live-value="ram">42%</span> reserved for release tasks.</p>
-          </div>
-          <div class="panel">
-            <h3>Disk usage</h3>
-            <p><span class="inline-code" data-live-value="disk">71%</span> build cache and artifacts.</p>
-          </div>
-          <div class="panel">
-            <h3>Network</h3>
-            <p><span class="inline-code" data-live-value="net">1.4mb/s</span> sync throughput.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section reveal" data-reveal>
-        <div class="section-header">
-          <h2>Release discipline</h2>
-          <p>Every release ships with a checklist-driven pipeline.</p>
-        </div>
-        <div class="split">
-          <div class="shell">
-            <div class="shell-header">
-              <div class="shell-controls">
-                <span class="shell-dot"></span>
-                <span class="shell-dot yellow"></span>
-                <span class="shell-dot green"></span>
-              </div>
-              <div class="shell-title">/home/cryptd777/release/checklist</div>
-              <div class="shell-status">pipeline</div>
-            </div>
-            <div class="shell-body">
-              <div class="terminal-line"><span class="prompt">$</span><span class="command"> build --target linux</span></div>
-              <div class="terminal-line"><span class="hint">Compiles and bundles desktop UI assets</span></div>
-              <div class="terminal-line"><span class="prompt">$</span><span class="command"> test --suite smoke</span></div>
-              <div class="terminal-line"><span class="hint">Fast validation on real devices</span></div>
-              <div class="terminal-line"><span class="prompt">$</span><span class="command"> package --deb --appimage</span></div>
-              <div class="terminal-line"><span class="hint">Release artifacts + checksums</span></div>
-            </div>
-          </div>
-          <div class="panel">
-            <h3>Release includes</h3>
-            <p>Versioned notes, migration steps, signing, and minimal rollback time.</p>
-            <div class="badge-row">
-              <span class="badge">checksums</span>
-              <span class="badge live">qa notes</span>
-              <span class="badge">install scripts</span>
-            </div>
+            <h3>Linux-first</h3>
+            <p>Designed and tested on real Linux hardware.</p>
           </div>
         </div>
       </section>

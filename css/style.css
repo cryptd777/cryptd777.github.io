@@ -12,7 +12,7 @@
   --accent-3: #f3b86a;
   --danger: #ff6b6b;
   --line: rgba(124, 255, 107, 0.22);
-  --glow: 0 0 24px rgba(124, 255, 107, 0.18);
+  --glow: 0 0 18px rgba(124, 255, 107, 0.14);
   --radius-lg: 18px;
   --radius-md: 12px;
   --radius-sm: 8px;
@@ -44,32 +44,6 @@ body {
   overflow-x: hidden;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: repeating-linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.03) 0px,
-      rgba(255, 255, 255, 0.03) 1px,
-      transparent 2px,
-      transparent 4px
-    );
-  opacity: 0.18;
-  pointer-events: none;
-  z-index: 0;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(circle at 10% 20%, rgba(124, 255, 107, 0.08), transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(90, 209, 255, 0.08), transparent 45%);
-  mix-blend-mode: screen;
-  pointer-events: none;
-  z-index: 0;
-}
 
 a {
   color: inherit;
@@ -112,7 +86,7 @@ img {
   z-index: 10;
   background: rgba(7, 13, 9, 0.92);
   border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(18px);
+  backdrop-filter: blur(12px);
 }
 
 .nav-inner {
@@ -306,7 +280,7 @@ img {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: 22px;
-  box-shadow: var(--glow);
+  box-shadow: 0 0 12px rgba(7, 255, 123, 0.08);
 }
 
 .panel h3 {
@@ -363,7 +337,7 @@ img {
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 0 40px rgba(7, 255, 123, 0.08);
+  box-shadow: 0 0 24px rgba(7, 255, 123, 0.06);
 }
 
 .shell-header {
@@ -398,7 +372,7 @@ img {
 
 .shell-dot.green {
   background: rgba(124, 255, 107, 0.8);
-  box-shadow: 0 0 10px rgba(124, 255, 107, 0.4);
+  box-shadow: 0 0 8px rgba(124, 255, 107, 0.3);
 }
 
 .shell-title {
@@ -444,6 +418,7 @@ img {
   background: var(--accent);
   margin-left: 4px;
   animation: blink 1s steps(1) infinite;
+  will-change: opacity;
 }
 
 .log-stream {
@@ -536,6 +511,7 @@ img {
     justify-content: center;
   }
 }
+
 
 @media (prefers-reduced-motion: reduce) {
   *,
