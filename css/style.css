@@ -47,6 +47,14 @@ a:hover {
   color: var(--accent);
 }
 
+a:focus-visible,
+.btn:focus-visible,
+.nav-links a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -266,6 +274,8 @@ img {
   border-radius: var(--radius-md);
   padding: 24px;
   box-shadow: var(--shadow);
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .card h3 {
@@ -315,6 +325,16 @@ img {
   color: #e6eefc;
   display: grid;
   gap: 10px;
+  max-width: 100%;
+  overflow: hidden;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.terminal div,
+.terminal .hint {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .prompt {
@@ -337,6 +357,8 @@ img {
 
 .inline-link {
   color: var(--accent);
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .footer {

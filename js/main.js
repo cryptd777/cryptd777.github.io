@@ -6,10 +6,17 @@ yearTargets.forEach((el) => {
 });
 
 const navLinks = document.querySelectorAll(".nav-links a");
-const currentPath = window.location.pathname.split("/").pop() || "index.html";
+const pathSegments = window.location.pathname.split("/").filter(Boolean);
+const currentFile = pathSegments[pathSegments.length - 1] || "index.html";
+const inProjectsFolder = pathSegments.includes("projects");
+
 navLinks.forEach((link) => {
   const linkPath = link.getAttribute("href").split("/").pop();
-  if (linkPath === currentPath) {
+  const isProjectsLink = linkPath === "projects.html";
+  const isActive =
+    linkPath === currentFile || (inProjectsFolder && isProjectsLink);
+
+  if (isActive) {
     link.classList.add("active");
   }
 });
