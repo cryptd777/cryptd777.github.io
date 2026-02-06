@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | cryptd777</title>
-  <meta name="description" content="Open-source projects by cryptd777: privacy-first browser and Linux sync client." />
+  <meta name="description" content="Open-source projects by cryptd777: privacy-first browser, Linux sync client, and release tooling." />
   <meta property="og:title" content="Projects | cryptd777" />
   <meta property="og:description" content="Open-source projects by cryptd777." />
   <meta property="og:type" content="website" />
@@ -12,7 +12,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -34,7 +34,7 @@
 
     <header class="header small">
       <div class="container">
-        <div class="hero-logo">c7</div>
+        <div class="eyebrow">workspace</div>
         <h1>Projects</h1>
         <p>Linux-first apps and workflows built for speed, privacy, and reliability.</p>
       </div>
@@ -47,19 +47,19 @@
           <p>Projects with active releases, installers, and documentation.</p>
         </div>
         <div class="grid">
-          <article class="card">
+          <article class="panel">
             <div class="meta">Electron • AppImage • DEB</div>
             <h3>Cryptowser</h3>
             <p>Privacy-first Electron browser optimized for lightweight Linux systems.</p>
             <p><a class="inline-link" href="projects/cryptowser/index.html">Project page</a></p>
           </article>
-          <article class="card">
+          <article class="panel">
             <div class="meta">Python • rclone • DEB</div>
             <h3>LinuxCloudSync</h3>
             <p>Pro sync client with profiles, three modes, and one-click recovery.</p>
             <p><a class="inline-link" href="projects/linuxcloudsync/index.html">Project page</a></p>
           </article>
-          <article class="card">
+          <article class="panel">
             <div class="meta">Python • PyQt • AppImage</div>
             <h3>ProxyMaster</h3>
             <p>Linux GUI for managing system proxy settings plus apt/dnf/pacman/zypper configs.</p>
@@ -74,17 +74,43 @@
           <p>What each project ships with by default.</p>
         </div>
         <div class="split">
-          <div class="card">
+          <div class="panel">
             <h3>Packaging</h3>
             <p>DEB and AppImage builds designed for modern Linux distros.</p>
           </div>
-          <div class="card">
+          <div class="panel">
             <h3>Documentation</h3>
             <p>Clear install steps, quick starts, and troubleshooting guides.</p>
           </div>
-          <div class="card">
+          <div class="panel">
             <h3>Support</h3>
             <p>GitHub issue tracking with reproducible bug reports.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" data-reveal>
+        <div class="section-header">
+          <h2>Live pipeline</h2>
+          <p>Status feed from recent releases and builds.</p>
+        </div>
+        <div class="shell">
+          <div class="shell-header">
+            <div class="shell-controls">
+              <span class="shell-dot"></span>
+              <span class="shell-dot yellow"></span>
+              <span class="shell-dot green"></span>
+            </div>
+            <div class="shell-title">/home/cryptd777/releases/live.log</div>
+            <div class="shell-status" data-live="clock">00:00:00</div>
+          </div>
+          <div class="shell-body">
+            <div class="log-stream">
+              <div class="log-line"><strong>[BUILD]</strong> Cryptowser v1.x nightly passed</div>
+              <div class="log-line"><strong>[PACK]</strong> LinuxCloudSync 0.x deb build queued</div>
+              <div class="log-line"><strong class="tag">[DOCS]</strong> Quickstart refreshed</div>
+              <div class="log-line"><strong>[CHECK]</strong> checksum verification complete</div>
+            </div>
           </div>
         </div>
       </section>
@@ -95,11 +121,11 @@
           <p>Source code, releases, and documentation live in public repos.</p>
         </div>
         <div class="grid">
-          <div class="card">
+          <div class="panel">
             <h3>Main account</h3>
             <p><a class="inline-link" href="https://github.com/cryptd777">github.com/cryptd777</a></p>
           </div>
-          <div class="card">
+          <div class="panel">
             <h3>Second account</h3>
             <p><a class="inline-link" href="https://github.com/cryptd7777">github.com/cryptd7777</a></p>
           </div>

@@ -12,7 +12,7 @@
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../css/style.css" />
 </head>
 <body>
@@ -34,11 +34,12 @@
 
     <header class="header small">
       <div class="container">
-        <div class="hero-logo">c7</div>
+        <div class="eyebrow">project</div>
         <h1>Cryptowser</h1>
         <p>Privacy-focused Electron browser optimized for lightweight Linux systems.</p>
         <div class="badge-row">
-          <span class="badge">Production-ready</span>
+          <span class="badge">production-ready</span>
+          <span class="badge live">appimage + deb</span>
         </div>
       </div>
     </header>
@@ -50,21 +51,31 @@
           <p>Core specs and release coverage.</p>
         </div>
         <div class="split">
-          <div class="card">
-            <div class="list">
-              <span><strong>Platform:</strong> Linux (AMD64, ARM64)</span>
-              <span><strong>Stack:</strong> Electron</span>
-              <span><strong>Focus:</strong> Privacy, speed, lightweight UI</span>
-              <span><strong>Packages:</strong> AppImage, DEB</span>
-            </div>
+          <div class="panel">
+            <div class="meta">Release scope</div>
+            <p><strong>Platform:</strong> Linux (AMD64, ARM64)</p>
+            <p><strong>Stack:</strong> Electron</p>
+            <p><strong>Focus:</strong> Privacy, speed, lightweight UI</p>
+            <p><strong>Packages:</strong> AppImage, DEB</p>
           </div>
-          <div class="terminal">
-            <div><span class="prompt">$</span> release</div>
-            <div class="hint">v1.0.1</div>
-            <div><span class="prompt">$</span> packages</div>
-            <div class="hint">AppImage, DEB</div>
-            <div><span class="prompt">$</span> repo</div>
-            <div class="hint">github.com/cryptd777/cryptowser</div>
+          <div class="shell">
+            <div class="shell-header">
+              <div class="shell-controls">
+                <span class="shell-dot"></span>
+                <span class="shell-dot yellow"></span>
+                <span class="shell-dot green"></span>
+              </div>
+              <div class="shell-title">/home/cryptd777/cryptowser</div>
+              <div class="shell-status" data-live="clock">00:00:00</div>
+            </div>
+            <div class="shell-body">
+              <div class="terminal-line"><span class="prompt">$</span><span class="command"> release</span></div>
+              <div class="terminal-line"><span class="hint">v1.0.x stable channel</span></div>
+              <div class="terminal-line"><span class="prompt">$</span><span class="command"> packages</span></div>
+              <div class="terminal-line"><span class="hint">AppImage, DEB</span></div>
+              <div class="terminal-line"><span class="prompt">$</span><span class="command"> repo</span></div>
+              <div class="terminal-line"><span class="hint">github.com/cryptd777/cryptowser</span></div>
+            </div>
           </div>
         </div>
       </section>
@@ -75,17 +86,21 @@
           <p>Built for speed and privacy without heavy resource usage.</p>
         </div>
         <div class="grid">
-          <div class="card">
+          <div class="panel">
             <h3>Ultra low footprint</h3>
-            <p>Runs smoothly on machines with 1GB RAM.</p>
+            <p>Runs smoothly on machines with limited memory.</p>
           </div>
-          <div class="card">
+          <div class="panel">
             <h3>Privacy first</h3>
             <p>Built-in ad and tracker blocking with privacy-focused defaults.</p>
           </div>
-          <div class="card">
+          <div class="panel">
             <h3>ARM64 ready</h3>
             <p>Supports Raspberry Pi and lightweight desktops.</p>
+          </div>
+          <div class="panel">
+            <h3>Keyboard UI</h3>
+            <p>Fast tab switching and command palette for power users.</p>
           </div>
         </div>
       </section>
@@ -95,7 +110,7 @@
           <h2>Repository</h2>
           <p>Releases and source code live on GitHub.</p>
         </div>
-        <div class="card">
+        <div class="panel">
           <a class="inline-link" href="https://github.com/cryptd777/cryptowser">github.com/cryptd777/cryptowser</a>
         </div>
       </section>
