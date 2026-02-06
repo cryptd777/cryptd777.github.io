@@ -1,15 +1,16 @@
 :root {
   --bg: #0f1115;
   --bg-2: #151a22;
-  --surface: rgba(18, 22, 29, 0.88);
-  --surface-strong: rgba(22, 28, 38, 0.95);
+  --surface: rgba(18, 23, 32, 0.86);
+  --surface-strong: rgba(24, 30, 41, 0.94);
   --ink: #f3f6fb;
   --muted: #b2bccb;
   --accent: #6ab3ff;
   --accent-2: #9be28f;
   --accent-3: #f4c76b;
   --border: rgba(255, 255, 255, 0.12);
-  --shadow: 0 30px 70px rgba(7, 10, 16, 0.55);
+  --shadow: 0 35px 80px rgba(7, 10, 16, 0.6);
+  --glow: 0 0 40px rgba(106, 179, 255, 0.12);
   --radius: 18px;
   --sans: "Source Sans Pro", "Space Grotesk", sans-serif;
   --mono: "JetBrains Mono", "Fira Code", monospace;
@@ -129,7 +130,7 @@ button:focus-visible {
   letter-spacing: 2px;
   color: #0a0f14;
   background: linear-gradient(135deg, rgba(106, 179, 255, 0.9), rgba(155, 226, 143, 0.9));
-  box-shadow: 0 24px 46px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 24px 46px rgba(0, 0, 0, 0.45), var(--glow);
 }
 
 #header h1 {
@@ -156,7 +157,7 @@ button:focus-visible {
   margin: 30px auto;
   padding: 34px;
   border-radius: var(--radius);
-  background: var(--surface);
+  background: linear-gradient(145deg, rgba(20, 26, 36, 0.92), rgba(15, 20, 28, 0.9));
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
@@ -212,7 +213,7 @@ button:focus-visible {
 }
 
 .card {
-  background: var(--surface-strong);
+  background: linear-gradient(155deg, rgba(26, 34, 46, 0.96), rgba(18, 24, 34, 0.96));
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 22px;
@@ -309,6 +310,9 @@ button:focus-visible {
   border: 1px solid rgba(182, 204, 255, 0.2);
   display: grid;
   gap: 8px;
+  font-size: clamp(0.82rem, 2.4vw, 0.98rem);
+  line-height: 1.5;
+  overflow-x: auto;
 }
 
 .terminal .prompt {
@@ -317,6 +321,10 @@ button:focus-visible {
 
 .terminal .hint {
   color: #a6e3a1;
+}
+
+.terminal div {
+  word-break: break-word;
 }
 
 .inline-link {
@@ -352,6 +360,11 @@ button:focus-visible {
 
   .section {
     padding: 26px;
+  }
+
+  .terminal {
+    padding: 14px;
+    border-radius: 12px;
   }
 }
 
