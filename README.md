@@ -1,25 +1,41 @@
 # cryptd777.github.io
 
-Light‑mode, card‑based portfolio site for cryptd777 with AMP equivalents.
+Light‑mode, card‑based portfolio site for cryptd777. The non‑AMP site is the primary focus.
 
-## Pages
+## Structure
 
-- `index.html`
-- `projects.html`
-- `about.html`
-- `contact.html`
+- `index.html` (home)
+- `projects.html` (projects overview)
+- `about.html` (background + philosophy)
+- `contact.html` (contact + collaboration)
 - `projects/cryptowser/index.html`
 - `projects/linuxcloudsync/index.html`
-
-AMP versions live under `amp/` with matching paths.
+- `projects/proxymaster/index.html`
+- `styles.css` (shared design system)
+- `assets/` (icons + OG assets)
+- `amp/` (legacy AMP equivalents)
 
 ## Design System
 
 - Light mode only
 - Card‑based layout
 - Semantic HTML5
-- Self‑contained CSS in each HTML file
+- Shared stylesheet (`styles.css`)
 - No external CSS frameworks or JS libraries
+
+## Recent Changes
+
+- Promoted **LinuxCloudSync** as the flagship project across home and projects pages.
+- Added “Coming Soon” project cards to highlight upcoming work.
+- Added open‑source philosophy section to `about.html`.
+- Cleaned up layout spacing and grid classes for consistent card gaps.
+- Fixed a media query parsing bug in `styles.css` that could break layout.
+
+## How It Works
+
+- All pages share `styles.css` for consistent spacing, typography, and cards.
+- Grids use `grid grid-2` and `grid grid-3` classes for responsive columns.
+- `.section` provides vertical rhythm between blocks.
 
 ## Local Preview
 
@@ -30,11 +46,16 @@ python3 -m http.server 8000
 Then open:
 
 - `http://localhost:8000/index.html`
-- `http://localhost:8000/amp/index.html`
 
 If you hit caching issues, add a cache buster:
 
 - `http://localhost:8000/index.html?v=1`
+
+## Tests
+
+```bash
+bash scripts/test.sh
+```
 
 ## Notes
 

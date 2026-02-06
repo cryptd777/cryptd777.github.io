@@ -36,4 +36,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://cryptd777.github.io/projects/proxymaster/index.html</loc>
+  </url>
 </urlset>

@@ -32,190 +32,12 @@
         "@type": "Person",
         "name": "cryptd777",
         "url": "https://cryptd777.github.io/",
-        "sameAs": [
-          "https://github.com/cryptd777"
-        ]
+        "sameAs": ["https://github.com/cryptd777"]
       }
     }
   </script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <style>
-
-:root {
-  --bg: #F7F8FB;
-  --bg-alt: #EEF2F7;
-  --card: #FFFFFF;
-  --text: #0F172A;
-  --muted: #64748B;
-  --primary: #2563EB;
-  --accent: #10B981;
-  --border: #E2E8F0;
-  --shadow: 0 10px 24px -18px rgba(15, 23, 42, 0.35);
-  --radius: 18px;
-}
-
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: "Poppins", "Inter", "Roboto", system-ui, -apple-system, sans-serif;
-  color: var(--text);
-  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
-  line-height: 1.6;
-}
-
-a { color: inherit; text-decoration: none; }
-
-.page { min-height: 100vh; display: flex; flex-direction: column; }
-
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(249, 250, 251, 0.95);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(8px);
-}
-
-.nav-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.brand-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  background: #FFFFFF;
-  border: 1px solid var(--border);
-  display: grid;
-  place-items: center;
-  font-weight: 800;
-  color: var(--accent);
-  box-shadow: var(--shadow);
-}
-
-.brand-meta span:first-child {
-  font-size: 0.72rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--muted);
-  display: block;
-}
-
-.brand-meta span:last-child {
-  font-size: 0.85rem;
-  color: var(--muted);
-  display: block;
-  margin-top: 2px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  font-size: 0.95rem;
-  color: var(--muted);
-}
-
-.nav-links a {
-  padding: 6px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: #FFFFFF;
-}
-
-.nav-links a.active {
-  background: linear-gradient(135deg, #3B82F6, #2563EB);
-  color: #FFFFFF;
-  border-color: transparent;
-  box-shadow: 0 10px 20px -16px rgba(37, 99, 235, 0.7);
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 32px 20px 64px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.grid { display: grid; gap: 20px; }
-.grid-2 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-.grid-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 24px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover { transform: translateY(-5px); }
-
-h1, h2, h3 { margin: 0; line-height: 1.2; }
-p { margin: 0; color: var(--muted); }
-
-.eyebrow {
-  font-size: 0.72rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.badge-group { display: flex; flex-wrap: wrap; gap: 8px; }
-.badge {
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: #F1F5F9;
-  border: 1px solid var(--border);
-  font-size: 0.82rem;
-  color: #475569;
-}
-
-.btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
-.btn {
-  padding: 10px 16px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: #FFFFFF;
-  color: var(--text);
-  font-weight: 600;
-}
-.btn.primary {
-  background: linear-gradient(135deg, #3B82F6, #2563EB);
-  color: #FFFFFF;
-  border-color: transparent;
-}
-
-.list { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; color: var(--muted); }
-
-footer {
-  margin-top: auto;
-  padding: 24px 20px 32px;
-  text-align: center;
-  font-size: 0.8rem;
-  color: var(--muted);
-  border-top: 1px solid var(--border);
-  background: #FFFFFF;
-}
-
-  </style>
+  <link rel="stylesheet" href="styles.css?v=20260206" />
 </head>
 <body>
   <div class="page">
@@ -225,7 +47,7 @@ footer {
           <div class="brand-icon">C7</div>
           <div class="brand-meta">
             <span>cryptd777</span>
-            <span>Linux-first builder</span>
+            <span>Linux tools specialist</span>
           </div>
         </div>
 
@@ -241,70 +63,91 @@ footer {
     </header>
 
     <main class="container">
-      <section class="card">
-        <span class="eyebrow">Signature focus</span>
-        <h1>Lightweight Linux UX with release-grade delivery.</h1>
-        <p>Designing open-source Linux tools that feel fast, stable, and respectful of hardware.</p>
+      <section class="card hero section">
+        <span class="eyebrow">Flagship Project</span>
+        <h1>LinuxCloudSync is the most active build.</h1>
+        <p>Daily development focused on reliable Linux cloud sync with disciplined releases.</p>
         <div class="btn-row">
-          <a class="btn primary" href="projects.html">View projects</a>
-          <a class="btn" href="contact.html">Start a project</a>
+          <a class="btn primary" href="projects/linuxcloudsync/index.html">View LinuxCloudSync</a>
+          <a class="btn" href="projects.html">All projects</a>
         </div>
       </section>
 
-      <section class="grid grid-2">
-        <article class="card">
-          <span class="eyebrow">Highlights</span>
-          <h2>Linux-first releases that stay stable in production.</h2>
-          <ul class="list">
-            <li>AppImage + DEB pipelines</li>
-            <li>Fast startup on low-resource devices</li>
-            <li>Privacy-first defaults</li>
-          </ul>
-        </article>
-        <article class="card">
-          <span class="eyebrow">Tech stack</span>
+      <section class="grid grid-3 section">
+        
+        <article class="card featured">
           <div class="badge-group">
-            <span class="badge">Vim</span>
-            <span class="badge">Docker</span>
-            <span class="badge">Arch Linux</span>
-            <span class="badge">GCC</span>
-            <span class="badge">CMake</span>
-            <span class="badge">Git</span>
-          </div>
-        </article>
-      </section>
-
-      <section class="grid grid-2">
-        <article class="card">
-          <div class="badge-group">
-            <span class="badge">Browser</span>
-            <span class="badge">Electron</span>
+            <span class="badge">Most Active</span>
+            <span class="badge">Daily Dev</span>
             <span class="badge">Linux</span>
           </div>
-          <h3>Cryptowser</h3>
-          <p>Privacy-focused Linux browser optimized for lightweight systems.</p>
-          <div class="btn-row">
-            <a class="btn" href="projects/cryptowser/index.html">View project</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="badge-group">
-            <span class="badge">Sync</span>
-            <span class="badge">Python</span>
-            <span class="badge">rclone</span>
-          </div>
           <h3>LinuxCloudSync</h3>
-          <p>Professional sync client with profiles, three modes, and recovery tooling.</p>
+          <p>Professional cloud storage sync client for Linux with advanced features.</p>
+          <p class="eyebrow" style="margin-top:10px;">Active development: updated frequently</p>
+          <ul class="list">
+            <li>Sync profiles + 3 sync modes</li><li>Force resync for bisync errors</li><li>Google Drive + OneDrive</li>
+          </ul>
           <div class="btn-row">
             <a class="btn" href="projects/linuxcloudsync/index.html">View project</a>
+            <a class="btn" href="https://github.com/cryptd777/LinuxCloudSync">GitHub</a>
           </div>
         </article>
+
+        <article class="card">
+          <div class="badge-group">
+            <span class="badge">Linux</span>
+            <span class="badge">Open Source</span>
+          </div>
+          <h3>Cryptowser</h3>
+          <p>A lightweight, privacy-focused desktop browser built with Electron.</p>
+          <p class="eyebrow" style="margin-top:10px;">Latest release: v1.0.1</p>
+          <ul class="list">
+            <li>Runs smoothly on 1GB RAM</li><li>Built-in ad + tracker blocking</li><li>AMD64 + ARM64 support</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn" href="projects/cryptowser/index.html">View project</a>
+            <a class="btn" href="https://github.com/cryptd777/cryptowser">GitHub</a>
+          </div>
+        </article>
+    
+        
+        <article class="card">
+          <div class="badge-group">
+            <span class="badge">Linux</span>
+            <span class="badge">Open Source</span>
+          </div>
+          <h3>ProxyMaster</h3>
+          <p>Linux GUI to manage system and package manager proxy settings.</p>
+          <p class="eyebrow" style="margin-top:10px;">Latest release: v2.2 (Sep 6, 2025)</p>
+          <ul class="list">
+            <li>Toggle proxy on/off</li><li>Manage apt/dnf/pacman/zypper</li><li>History of saved proxy values</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn" href="projects/proxymaster/index.html">View project</a>
+            <a class="btn" href="https://github.com/cryptd7777/ProxyMaster">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="badge-group">
+            <span class="badge">Coming Soon</span>
+            <span class="badge">In Design</span>
+          </div>
+          <h3>New Project</h3>
+          <p>Next Linux utility in development. Focused on speed, clarity, and clean releases.</p>
+          <ul class="list">
+            <li>Early design + architecture</li><li>Open-source by default</li><li>Release notes from day one</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn" href="contact.html">Follow updates</a>
+            <a class="btn" href="projects.html">All projects</a>
+          </div>
+        </article>
+    
       </section>
     </main>
 
-    <footer>
-      © 2026 cryptd777. Built for the Linux community.
-    </footer>
+    <footer>© 2026 cryptd777. Built for the Linux community.</footer>
   </div>
 </body>
 </html>
