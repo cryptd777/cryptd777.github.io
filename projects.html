@@ -44,9 +44,9 @@
     }
   </script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/tailwind.css" />
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://unpkg.com/lucide@0.451.0/dist/umd/lucide.min.js"></script>
+  <script src="assets/lucide.min.js"></script>
 </head>
 <body class="bg-[#0d1117] text-slate-100 antialiased">
   <div class="min-h-screen">
@@ -148,29 +148,19 @@
             <h2 class="text-xl font-semibold text-white">GitHub activity</h2>
             <i data-lucide="github" class="h-5 w-5 text-[#2ea043]"></i>
           </div>
-          <div class="stats-widget">
-            <img
-            class="mt-4 w-full rounded-lg border border-white/10"
-            src="https://github-readme-stats.vercel.app/api?username=cryptd777&show_icons=true&theme=github_dark&hide_border=true"
-            alt="GitHub stats for cryptd777"
-            loading="lazy"
-          />
-            <img
-            class="mt-4 w-full rounded-lg border border-white/10"
-            src="https://github-readme-stats.vercel.app/api/top-langs/?username=cryptd777&layout=compact&theme=github_dark&hide_border=true"
-            alt="Top languages for cryptd777"
-            loading="lazy"
-          />
-            <img
-            class="mt-4 w-full rounded-lg border border-white/10"
-            src="https://github-readme-stats.vercel.app/api?username=cryptd7777&show_icons=true&theme=github_dark&hide_border=true"
-            alt="GitHub stats for cryptd7777"
-            loading="lazy"
-          />
-            <div class="stat-fallback mt-4 hidden">
-            <p>Live stats are unavailable right now.</p>
-            <p>Open the profiles directly for activity details.</p>
-          </div>
+          <div class="mt-4 grid gap-3">
+            <div class="rounded-lg border border-white/10 bg-[#0d1117]/60 px-4 py-3">
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Focus areas</p>
+              <p class="mt-1 text-sm text-white">Desktop apps · Sync tools</p>
+            </div>
+            <div class="rounded-lg border border-white/10 bg-[#0d1117]/60 px-4 py-3">
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Top languages</p>
+              <p class="mt-1 text-sm text-white">Rust · Python · Bash</p>
+            </div>
+            <div class="rounded-lg border border-white/10 bg-[#0d1117]/60 px-4 py-3">
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Release cadence</p>
+              <p class="mt-1 text-sm text-white">Stable builds + notes</p>
+            </div>
           </div>
         </div>
       </section>
@@ -192,19 +182,6 @@
         navMenu.classList.toggle("hidden", isOpen);
       });
     }
-
-    const statImages = document.querySelectorAll(".stats-widget img");
-    const statFallback = document.querySelector(".stats-widget .stat-fallback");
-    let brokenCount = 0;
-    statImages.forEach((img) => {
-      img.addEventListener("error", () => {
-        img.classList.add("hidden");
-        brokenCount += 1;
-        if (statFallback && brokenCount === statImages.length) {
-          statFallback.classList.remove("hidden");
-        }
-      });
-    });
 
     lucide.createIcons();
   </script>
