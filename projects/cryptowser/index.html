@@ -35,9 +35,21 @@
     }
   </script>
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../../styles.css?v=20260207-1" />
+  <link rel="stylesheet" href="../../styles.css?v=20260207-4" />
 </head>
 <body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.getElementById("primary-nav");
+      if (!toggle || !nav) return;
+      toggle.addEventListener("click", () => {
+        const expanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("open");
+      });
+    });
+  </script>
   <div class="page">
     <header class="nav">
       <div class="nav-inner">
@@ -49,7 +61,12 @@
           </div>
         </div>
 
-        <nav class="nav-links" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          Menu
+          <span aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+
+        <nav class="nav-links" id="primary-nav" aria-label="Primary">
           <a href="../../index.html" class="">Home</a>
           <a href="../../projects.html" class="active">Projects</a>
           <a href="../../about.html" class="">About</a>
@@ -62,6 +79,8 @@
 
     <main class="container">
       <section class="card hero section">
+        <div class="hero-split" aria-hidden="true"></div>
+        <span class="hero-label">Browser Build</span>
         <span class="eyebrow">Browser project</span>
         <h1>Cryptowser</h1>
         <p>Privacy-focused Linux browser optimized for lightweight Linux systems and low-resource desktops.</p>
@@ -72,15 +91,28 @@
         </div>
       </section>
 
+      <div class="quick-actions" aria-label="Quick actions">
+        <a class="btn primary" href="https://github.com/cryptd777/cryptowser/releases/latest">Latest release</a>
+        <a class="btn" href="https://github.com/cryptd777/cryptowser#readme">Readme</a>
+        <a class="btn" href="https://github.com/cryptd777/cryptowser#installation">Install</a>
+      </div>
+
       <section class="grid grid-2 section">
         <article class="card">
           <h2>Snapshot</h2>
-          <ul class="list">
-            <li>Platform: Linux (AMD64, ARM64)</li>
-            <li>Stack: Electron, Chromium</li>
-            <li>Focus: Privacy, speed, lightweight Linux UI</li>
-            <li>Packages: AppImage, DEB</li>
+          <ul class="list icon-list">
+            <li><svg aria-hidden="true"><use href="../../assets/mini-icons.svg#icon-box"></use></svg><span>Platform: Linux (AMD64, ARM64)</span></li>
+            <li><svg aria-hidden="true"><use href="../../assets/mini-icons.svg#icon-cpu"></use></svg><span>Stack: Electron, Chromium</span></li>
+            <li><svg aria-hidden="true"><use href="../../assets/mini-icons.svg#icon-target"></use></svg><span>Focus: Privacy, speed, lightweight Linux UI</span></li>
+            <li><svg aria-hidden="true"><use href="../../assets/mini-icons.svg#icon-rocket"></use></svg><span>Packages: AppImage, DEB</span></li>
           </ul>
+          <h3 style="margin-top:18px;">Trusted tools</h3>
+          <div class="tools-row">
+            <span class="tool-chip">Electron</span>
+            <span class="tool-chip">Chromium</span>
+            <span class="tool-chip">Adblock</span>
+            <span class="tool-chip">ARM64</span>
+          </div>
         </article>
         <article class="card">
           <h2>Key features</h2>
@@ -100,12 +132,27 @@
       </section>
 
       <section class="card section">
+        <h2>Release timeline</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-meta">
+              <strong>v1.0.1</strong>
+              <span>Stable release</span>
+              <span>Feb 4, 2026</span>
+              <span>AppImage + DEB</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card section">
         <h2>Repository</h2>
         <p>Source code and releases live on GitHub.</p>
         <div class="btn-row">
-          <a class="btn primary" href="https://github.com/cryptd777/cryptowser">View releases</a>
-          <a class="btn" href="https://github.com/cryptd777/cryptowser">Readme</a>
-          <a class="btn" href="https://github.com/cryptd777/cryptowser">Install guide</a>
+          <a class="btn primary" href="https://github.com/cryptd777/cryptowser/releases/latest">View latest release</a>
+          <a class="btn" href="https://github.com/cryptd777/cryptowser#readme">Readme</a>
+          <a class="btn" href="https://github.com/cryptd777/cryptowser#installation">Install guide</a>
         </div>
       </section>
     </main>

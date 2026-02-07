@@ -34,9 +34,21 @@
     }
   </script>
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../../styles.css?v=20260207-1" />
+  <link rel="stylesheet" href="../../styles.css?v=20260207-4" />
 </head>
 <body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.getElementById("primary-nav");
+      if (!toggle || !nav) return;
+      toggle.addEventListener("click", () => {
+        const expanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("open");
+      });
+    });
+  </script>
   <div class="page">
     <header class="nav">
       <div class="nav-inner">
@@ -48,7 +60,12 @@
           </div>
         </div>
 
-        <nav class="nav-links" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          Menu
+          <span aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+
+        <nav class="nav-links" id="primary-nav" aria-label="Primary">
           <a href="../../index.html" class="">Home</a>
           <a href="../../projects.html" class="active">Projects</a>
           <a href="../../about.html" class="">About</a>
@@ -61,6 +78,8 @@
 
     <main class="container">
       <section class="card hero section">
+        <div class="hero-split" aria-hidden="true"></div>
+        <span class="hero-label">System Tool</span>
         <span class="eyebrow">Proxy manager</span>
         <h1>ProxyMaster</h1>
         <p>Linux GUI application for managing system proxy settings and package manager proxy configuration.</p>
@@ -71,6 +90,12 @@
         </div>
         <p class="eyebrow" style="margin-top:10px;">Latest release: v2.2 (Sep 6, 2025)</p>
       </section>
+
+      <div class="quick-actions" aria-label="Quick actions">
+        <a class="btn primary" href="https://github.com/cryptd7777/ProxyMaster/releases/latest">Latest release</a>
+        <a class="btn" href="https://github.com/cryptd7777/ProxyMaster#readme">Readme</a>
+        <a class="btn" href="https://github.com/cryptd7777/ProxyMaster#installation">Install</a>
+      </div>
 
       <section class="grid grid-2 section">
         <article class="card">
@@ -84,20 +109,42 @@
         </article>
         <article class="card">
           <h2>Requirements</h2>
-          <ul class="list">
-            <li>Python 3.7+</li>
-            <li>PyQt6 (or PyQt5 fallback)</li>
-            <li>pkexec for system config changes</li>
+          <ul class="list icon-list">
+            <li><svg aria-hidden="true"><use href="../../assets/mini-icons.svg#icon-box"></use></svg><span>Python 3.7+</span></li>
+            <li><svg aria-hidden="true"><use href="../../assets/mini-icons.svg#icon-cpu"></use></svg><span>PyQt6 (or PyQt5 fallback)</span></li>
+            <li><svg aria-hidden="true"><use href="../../assets/mini-icons.svg#icon-target"></use></svg><span>pkexec for system config changes</span></li>
           </ul>
+          <h3 style="margin-top:18px;">Trusted tools</h3>
+          <div class="tools-row">
+            <span class="tool-chip">PyQt</span>
+            <span class="tool-chip">pkexec</span>
+            <span class="tool-chip">systemd</span>
+            <span class="tool-chip">APT/DNF</span>
+          </div>
         </article>
+      </section>
+
+      <section class="card section">
+        <h2>Release timeline</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-meta">
+              <strong>v2.2</strong>
+              <span>Latest stable</span>
+              <span>Sep 6, 2025</span>
+              <span>Linux GUI</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="card section">
         <h2>Repository</h2>
         <p>Source code, releases, and AppImage live on GitHub.</p>
         <div class="btn-row">
-          <a class="btn primary" href="https://github.com/cryptd7777/ProxyMaster">View releases</a>
-          <a class="btn" href="https://github.com/cryptd7777/ProxyMaster">Readme</a>
+          <a class="btn primary" href="https://github.com/cryptd7777/ProxyMaster/releases/latest">View latest release</a>
+          <a class="btn" href="https://github.com/cryptd7777/ProxyMaster#readme">Readme</a>
         </div>
       </section>
     </main>

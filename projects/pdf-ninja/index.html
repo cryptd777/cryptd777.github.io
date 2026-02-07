@@ -36,9 +36,21 @@
     }
   </script>
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../../styles.css?v=20260207-1" />
+  <link rel="stylesheet" href="../../styles.css?v=20260207-4" />
 </head>
 <body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.getElementById("primary-nav");
+      if (!toggle || !nav) return;
+      toggle.addEventListener("click", () => {
+        const expanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("open");
+      });
+    });
+  </script>
   <div class="page">
     <header class="nav">
       <div class="nav-inner">
@@ -50,7 +62,12 @@
           </div>
         </div>
 
-        <nav class="nav-links" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          Menu
+          <span aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+
+        <nav class="nav-links" id="primary-nav" aria-label="Primary">
           <a href="../../index.html" class="">Home</a>
           <a href="../../projects.html" class="active">Projects</a>
           <a href="../../about.html" class="">About</a>
@@ -63,6 +80,8 @@
 
     <main class="container">
       <section class="card hero section">
+        <div class="hero-split" aria-hidden="true"></div>
+        <span class="hero-label">PDF Utility</span>
         <span class="eyebrow">PDF utility</span>
         <h1>PDF Ninja</h1>
         <p>Fast, safe PDF workflows for Linux. Everything runs locally with no uploads.</p>
@@ -73,22 +92,37 @@
           <span class="badge">AppImage</span>
         </div>
         <div class="badge-group">
-          <a class="badge" href="https://github.com/cryptd777/pdf-ninja/releases/tag/v0.0.1">v0.0.1</a>
+          <a class="badge release-pill" href="https://github.com/cryptd777/pdf-ninja/releases/latest">v0.0.1</a>
           <a class="badge" href="https://github.com/cryptd777/pdf-ninja/releases">Releases</a>
           <a class="badge" href="https://github.com/cryptd777/pdf-ninja">GitHub</a>
         </div>
       </section>
 
+      <div class="quick-actions" aria-label="Quick actions">
+        <a class="btn primary" href="https://github.com/cryptd777/pdf-ninja/releases/latest">Latest release</a>
+        <a class="btn" href="https://github.com/cryptd777/pdf-ninja#installation">Install</a>
+        <a class="btn" href="https://github.com/cryptd777/pdf-ninja#readme">Readme</a>
+      </div>
+
       <section class="grid grid-2 section">
         <article class="card">
           <h2>Snapshot</h2>
-          <ul class="list">
-            <li>Platform: Linux</li>
-            <li>UI: CustomTkinter (Python)</li>
-            <li>Focus: Local, offline PDF workflows</li>
-            <li>Latest release: v0.0.1</li>
-            <li>Bundled tools: pdfcpu, mutool, qpdf, ghostscript, img2pdf, poppler, ocrmypdf</li>
+          <ul class="list icon-list">
+            <li><svg aria-hidden="true"><use href="../../assets/mini-icons.svg#icon-box"></use></svg><span>Platform: Linux</span></li>
+            <li><svg aria-hidden="true"><use href="../../assets/mini-icons.svg#icon-cpu"></use></svg><span>UI: CustomTkinter (Python)</span></li>
+            <li><svg aria-hidden="true"><use href="../../assets/mini-icons.svg#icon-target"></use></svg><span>Focus: Local, offline PDF workflows</span></li>
+            <li><svg aria-hidden="true"><use href="../../assets/mini-icons.svg#icon-rocket"></use></svg><span>Latest release: v0.0.1 (Feb 7, 2026)</span></li>
           </ul>
+          <h3 style="margin-top:18px;">Trusted tools</h3>
+          <div class="tools-row">
+            <span class="tool-chip">pdfcpu</span>
+            <span class="tool-chip">qpdf</span>
+            <span class="tool-chip">ghostscript</span>
+            <span class="tool-chip">mutool</span>
+            <span class="tool-chip">img2pdf</span>
+            <span class="tool-chip">poppler</span>
+            <span class="tool-chip">ocrmypdf</span>
+          </div>
         </article>
         <article class="card">
           <h2>Key features</h2>
@@ -108,6 +142,21 @@
       </section>
 
       <section class="card section">
+        <h2>Release timeline</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-meta">
+              <strong>v0.0.1</strong>
+              <span>Initial public release</span>
+              <span>Feb 7, 2026</span>
+              <span>AppImage + DEB</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card section">
         <h2>Release notes</h2>
         <p>Latest published release highlights.</p>
         <div class="stat-strip">
@@ -121,7 +170,7 @@
           <li>Local-only processing with AppImage and DEB builds.</li>
         </ul>
         <div class="btn-row">
-          <a class="btn primary" href="https://github.com/cryptd777/pdf-ninja/releases/tag/v0.0.1">View v0.0.1</a>
+          <a class="btn primary" href="https://github.com/cryptd777/pdf-ninja/releases/latest">View latest release</a>
           <a class="btn" href="https://github.com/cryptd777/pdf-ninja/releases">All releases</a>
         </div>
       </section>

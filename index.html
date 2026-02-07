@@ -37,9 +37,21 @@
     }
   </script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260207-1" />
+  <link rel="stylesheet" href="styles.css?v=20260207-4" />
 </head>
 <body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.getElementById("primary-nav");
+      if (!toggle || !nav) return;
+      toggle.addEventListener("click", () => {
+        const expanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("open");
+      });
+    });
+  </script>
   <div class="page">
     <header class="nav">
       <div class="nav-inner">
@@ -51,7 +63,12 @@
           </div>
         </div>
 
-        <nav class="nav-links" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          Menu
+          <span aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+
+        <nav class="nav-links" id="primary-nav" aria-label="Primary">
           <a href="index.html" class="active">Home</a>
           <a href="projects.html" class="">Projects</a>
           <a href="about.html" class="">About</a>
@@ -64,6 +81,8 @@
 
     <main class="container">
       <section class="card hero section">
+        <div class="hero-split" aria-hidden="true"></div>
+        <span class="hero-label">Build Focus</span>
         <span class="eyebrow">Flagship Project</span>
         <h1>LinuxCloudSync is the most active build.</h1>
         <p>Daily development focused on reliable Linux cloud sync with disciplined releases.</p>
@@ -75,7 +94,7 @@
 
       <section class="grid grid-3 section">
         
-        <article class="card featured">
+        <article class="card featured tint-cloud">
           <div class="badge-group">
             <span class="badge">Most Active</span>
             <span class="badge">Daily Dev</span>
@@ -83,7 +102,7 @@
           </div>
           <h3>LinuxCloudSync</h3>
           <p>Professional cloud storage sync client for Linux with advanced features.</p>
-          <p class="eyebrow" style="margin-top:10px;">Active development: updated frequently</p>
+          <p class="eyebrow" style="margin-top:10px;">Latest release: v0.0.3 (Feb 6, 2026)</p>
           <ul class="list">
             <li>Sync profiles + 3 sync modes</li><li>Force resync for bisync errors</li><li>Google Drive + OneDrive</li>
           </ul>
@@ -93,14 +112,14 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card tint-browser">
           <div class="badge-group">
             <span class="badge">Linux</span>
             <span class="badge">Open Source</span>
           </div>
           <h3>Cryptowser</h3>
           <p>A lightweight, privacy-focused desktop browser built with Electron.</p>
-          <p class="eyebrow" style="margin-top:10px;">Latest release: v1.0.1</p>
+          <p class="eyebrow" style="margin-top:10px;">Latest release: v1.0.1 (Feb 4, 2026)</p>
           <ul class="list">
             <li>Runs smoothly on 1GB RAM</li><li>Built-in ad + tracker blocking</li><li>AMD64 + ARM64 support</li>
           </ul>
@@ -110,7 +129,7 @@
           </div>
         </article>
     
-        <article class="card">
+        <article class="card tint-pdf">
           <div class="badge-group">
             <span class="badge">PDF</span>
             <span class="badge">Offline</span>
@@ -118,7 +137,7 @@
           </div>
           <h3>PDF Ninja</h3>
           <p>Fast, offline PDF utility for Linux with local processing only.</p>
-          <p class="eyebrow" style="margin-top:10px;">Latest release: v0.0.1</p>
+          <p class="eyebrow" style="margin-top:10px;">Latest release: v0.0.1 (Feb 7, 2026)</p>
           <ul class="list">
             <li>Merge, split, compress, convert</li><li>Extract, protect, repair</li><li>AppImage + DEB builds</li>
           </ul>
@@ -130,7 +149,7 @@
         </article>
     
         
-        <article class="card">
+        <article class="card tint-proxy">
           <div class="badge-group">
             <span class="badge">Linux</span>
             <span class="badge">Open Source</span>
@@ -147,7 +166,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card tint-labs">
           <div class="badge-group">
             <span class="badge">Coming Soon</span>
             <span class="badge">In Design</span>

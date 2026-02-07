@@ -32,9 +32,21 @@
     }
   </script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260207-1" />
+  <link rel="stylesheet" href="styles.css?v=20260207-4" />
 </head>
 <body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.getElementById("primary-nav");
+      if (!toggle || !nav) return;
+      toggle.addEventListener("click", () => {
+        const expanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("open");
+      });
+    });
+  </script>
   <div class="page">
     <header class="nav">
       <div class="nav-inner">
@@ -46,7 +58,12 @@
           </div>
         </div>
 
-        <nav class="nav-links" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          Menu
+          <span aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+
+        <nav class="nav-links" id="primary-nav" aria-label="Primary">
           <a href="index.html" class="">Home</a>
           <a href="projects.html" class="">Projects</a>
           <a href="about.html" class="active">About</a>
@@ -59,6 +76,8 @@
 
     <main class="container">
       <section class="card hero section">
+        <div class="hero-split" aria-hidden="true"></div>
+        <span class="hero-label">Profile</span>
         <span class="eyebrow">About</span>
         <h1>Linux developer focused on privacy, speed, and release discipline.</h1>
         <p>I focus on shipping stable Linux desktop experiences with disciplined release pipelines.</p>
